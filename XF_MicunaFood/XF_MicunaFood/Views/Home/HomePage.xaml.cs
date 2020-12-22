@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace XF_MicunaFood
+namespace XF_MicunaFood.Views
 {
-    public partial class AppShell : Shell
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class HomePage : ContentPage
     {
-        public AppShell()
+        public HomePage()
         {
             InitializeComponent();
         }

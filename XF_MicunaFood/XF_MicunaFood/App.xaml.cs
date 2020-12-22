@@ -12,8 +12,8 @@ namespace XF_MicunaFood
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
-            //MainPage = new DefaultPage();
+            //MainPage = new AppShell();
+            MainPage = new HomePage();
         }
 
         protected override void OnStart()

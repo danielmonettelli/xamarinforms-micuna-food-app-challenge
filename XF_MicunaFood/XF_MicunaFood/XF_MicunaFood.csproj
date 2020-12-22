@@ -28,17 +28,13 @@
 
   <ItemGroup>
     <Folder Include="Models\" />
+    <Folder Include="Resources\SVGs\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Resources\Images\" />
   </ItemGroup>
 
 
   <ItemGroup>
-    <EmbeddedResource Include="Resources\FontFamily\BebasNeue-Bold.ttf" />
-    <EmbeddedResource Include="Resources\FontFamily\BebasNeue-Book.ttf" />
-    <EmbeddedResource Include="Resources\FontFamily\BebasNeue-Light.ttf" />
-    <EmbeddedResource Include="Resources\FontFamily\BebasNeue-Regular.ttf" />
-    <EmbeddedResource Include="Resources\FontFamily\BebasNeue-Thin.ttf" />
     <EmbeddedResource Include="Resources\FontFamily\OpenSans-Bold.ttf" />
     <EmbeddedResource Include="Resources\FontFamily\OpenSans-BoldItalic.ttf" />
     <EmbeddedResource Include="Resources\FontFamily\OpenSans-ExtraBold.ttf" />
@@ -49,51 +45,13 @@
     <EmbeddedResource Include="Resources\FontFamily\OpenSans-Regular.ttf" />
     <EmbeddedResource Include="Resources\FontFamily\OpenSans-SemiBold.ttf" />
     <EmbeddedResource Include="Resources\FontFamily\OpenSans-SemiBoldItalic.ttf" />
-    <EmbeddedResource Include="Resources\FontFamily\Poppins-Black.ttf" />
-    <EmbeddedResource Include="Resources\FontFamily\Poppins-BlackItalic.ttf" />
-    <EmbeddedResource Include="Resources\FontFamily\Poppins-Bold.ttf" />
-    <EmbeddedResource Include="Resources\FontFamily\Poppins-BoldItalic.ttf" />
-    <EmbeddedResource Include="Resources\FontFamily\Poppins-ExtraBold.ttf" />
-    <EmbeddedResource Include="Resources\FontFamily\Poppins-ExtraBoldItalic.ttf" />
-    <EmbeddedResource Include="Resources\FontFamily\Poppins-ExtraLight.ttf" />
-    <EmbeddedResource Include="Resources\FontFamily\Poppins-ExtraLightItalic.ttf" />
-    <EmbeddedResource Include="Resources\FontFamily\Poppins-Italic.ttf" />
-    <EmbeddedResource Include="Resources\FontFamily\Poppins-Light.ttf" />
-    <EmbeddedResource Include="Resources\FontFamily\Poppins-LightItalic.ttf" />
-    <EmbeddedResource Include="Resources\FontFamily\Poppins-Medium.ttf" />
-    <EmbeddedResource Include="Resources\FontFamily\Poppins-MediumItalic.ttf" />
-    <EmbeddedResource Include="Resources\FontFamily\Poppins-Regular.ttf" />
-    <EmbeddedResource Include="Resources\FontFamily\Poppins-SemiBold.ttf" />
-    <EmbeddedResource Include="Resources\FontFamily\Poppins-SemiBoldItalic.ttf" />
-    <EmbeddedResource Include="Resources\FontFamily\Poppins-Thin.ttf" />
-    <EmbeddedResource Include="Resources\FontFamily\Poppins-ThinItalic.ttf" />
-    <EmbeddedResource Include="Resources\FontFamily\SourceSansPro-Black.ttf" />
-    <EmbeddedResource Include="Resources\FontFamily\SourceSansPro-BlackItalic.ttf" />
-    <EmbeddedResource Include="Resources\FontFamily\SourceSansPro-Bold.ttf" />
-    <EmbeddedResource Include="Resources\FontFamily\SourceSansPro-BoldItalic.ttf" />
-    <EmbeddedResource Include="Resources\FontFamily\SourceSansPro-ExtraLight.ttf" />
-    <EmbeddedResource Include="Resources\FontFamily\SourceSansPro-ExtraLightItalic.ttf" />
-    <EmbeddedResource Include="Resources\FontFamily\SourceSansPro-Italic.ttf" />
-    <EmbeddedResource Include="Resources\FontFamily\SourceSansPro-Light.ttf" />
-    <EmbeddedResource Include="Resources\FontFamily\SourceSansPro-LightItalic.ttf" />
-    <EmbeddedResource Include="Resources\FontFamily\SourceSansPro-Regular.ttf" />
-    <EmbeddedResource Include="Resources\FontFamily\SourceSansPro-SemiBold.ttf" />
-    <EmbeddedResource Include="Resources\FontFamily\SourceSansPro-SemiBoldItalic.ttf" />
 
     <EmbeddedResource Include="Resources\FontIcons\materialdesignicons-webfont.ttf" />
     <EmbeddedResource Include="Resources\FontIcons\monettelliuikitfonticons.ttf" />
-
-    <EmbeddedResource Include="Resources\SVGs\svg_preview_darktheme.svg" />
-    <EmbeddedResource Include="Resources\SVGs\svg_preview_instagramdarktheme.svg" />
-    <EmbeddedResource Include="Resources\SVGs\svg_preview_instagrameleganttheme.svg" />
-    <EmbeddedResource Include="Resources\SVGs\svg_preview_lighttheme.svg" />
   </ItemGroup>
 
 
   <ItemGroup>
-    <EmbeddedResource Update="AppShell.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Styles\General.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -118,28 +76,10 @@
     <EmbeddedResource Update="Themes\LightTheme.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\PreviewApp\ConstructionPage.xaml">
+    <EmbeddedResource Update="Views\Home\FoodDetailPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\PreviewApp\DefaultPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\PreviewApp\Styles.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\ShellTemplates\FlyoutHeaderTemplate.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\ShellTemplates\FlyoutItemTemplate.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\ShellTemplates\FlyoutMenuItemTemplate.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\ShellTemplates\Styles.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\PreviewApp\ThemesPage.xaml">
+    <EmbeddedResource Update="Views\Home\HomePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

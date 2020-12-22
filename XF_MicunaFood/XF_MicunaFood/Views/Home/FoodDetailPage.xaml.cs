@@ -5,15 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
-using Xamarin.Forms.PancakeView;
 using Xamarin.Forms.Xaml;
 
-namespace XF_MicunaFood.Views.ShellTemplates
+namespace XF_MicunaFood.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class FlyoutHeaderTemplate : PancakeView
+    public partial class FoodDetailPage : ContentPage
     {
-        public FlyoutHeaderTemplate()
+        public FoodDetailPage()
         {
             InitializeComponent();
         }
