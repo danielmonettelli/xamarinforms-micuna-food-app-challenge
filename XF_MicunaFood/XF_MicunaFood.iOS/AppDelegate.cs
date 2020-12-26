@@ -29,6 +29,12 @@ namespace XF_MicunaFood.iOS
 
             global::Xamarin.Forms.Forms.Init();
 
+            // Sharpnado SECTOR in iOS
+            // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+            Sharpnado.Shades.iOS.iOSShadowsRenderer.Initialize();
+            Sharpnado.Tabs.iOS.Preserver.Preserve();
+            // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
             // ADD Init() Material Visual
             // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
             global::Xamarin.Forms.FormsMaterial.Init();

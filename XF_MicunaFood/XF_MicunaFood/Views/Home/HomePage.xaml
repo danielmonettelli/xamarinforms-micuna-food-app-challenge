@@ -1,12 +1,65 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="XF_MicunaFood.Views.HomePage">
+<ContentPage
+    x:Class="XF_MicunaFood.Views.HomePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+
+        <ScrollView>
+
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.87*" />
+                    <RowDefinition Height="0.107*" />
+                    <RowDefinition Height="0.023*" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.04*" />
+                    <ColumnDefinition Width="0.92*" />
+                    <ColumnDefinition Width="0.04*" />
+                </Grid.ColumnDefinitions>
+
+
+                <Grid
+                    Grid.RowSpan="3"
+                    Grid.ColumnSpan="3">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.03*" />
+                        <RowDefinition Height="0.023*" />
+                        <RowDefinition Height="0.07*" />
+                        <RowDefinition Height="0.02*" />
+                        <RowDefinition Height="0.041*" />
+                        <RowDefinition Height="0.01*" />
+                        <RowDefinition Height="0.028*" />
+                        <RowDefinition Height="0.03*" />
+                        <RowDefinition Height="0.088*" />
+                        <RowDefinition Height="0.04*" />
+                        <RowDefinition Height="0.361*" />
+                        <RowDefinition Height="0.04*" />
+                        <RowDefinition Height="0.015*" />
+                        <RowDefinition Height="0.182*" />
+                        <RowDefinition Height="0.022*" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.04*" />
+                        <ColumnDefinition Width="0.087*" />
+                        <ColumnDefinition Width="0.68*" />
+                        <ColumnDefinition Width="0.153*" />
+                        <ColumnDefinition Width="0.04*" />
+                    </Grid.ColumnDefinitions>
+
+                </Grid>
+
+
+            </Grid>
+
+        </ScrollView>
+
     </ContentPage.Content>
+
 </ContentPage>

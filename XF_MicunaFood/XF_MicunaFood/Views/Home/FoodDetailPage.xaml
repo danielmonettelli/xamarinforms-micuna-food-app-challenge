@@ -1,12 +1,47 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="XF_MicunaFood.Views.FoodDetailPage">
+<ContentPage
+    x:Class="XF_MicunaFood.Views.FoodDetailPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+
+        <ScrollView>
+
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.03*" />
+                    <RowDefinition Height="0.033*" />
+                    <RowDefinition Height="0.03*" />
+                    <RowDefinition Height="0.47*" />
+                    <RowDefinition Height="0.04*" />
+                    <RowDefinition Height="0.041*" />
+                    <RowDefinition Height="0.02*" />
+                    <RowDefinition Height="0.168*" />
+                    <RowDefinition Height="0.04*" />
+                    <RowDefinition Height="0.02*" />
+                    <RowDefinition Height="0.028*" />
+                    <RowDefinition Height="0.01*" />
+                    <RowDefinition Height="0.028*" />
+                    <RowDefinition Height="0.013*" />
+                    <RowDefinition Height="0.029*" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.04*" />
+                    <ColumnDefinition Width="0.04*" />
+                    <ColumnDefinition Width="0.28*" />
+                    <ColumnDefinition Width="0.126*" />
+                    <ColumnDefinition Width="0.455*" />
+                    <ColumnDefinition Width="0.019*" />
+                    <ColumnDefinition Width="0.04*" />
+                </Grid.ColumnDefinitions>
+
+            </Grid>
+
+        </ScrollView>
+
     </ContentPage.Content>
+
 </ContentPage>

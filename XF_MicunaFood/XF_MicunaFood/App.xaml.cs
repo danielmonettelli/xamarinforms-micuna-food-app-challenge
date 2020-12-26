@@ -12,6 +12,9 @@ namespace XF_MicunaFood
         {
             InitializeComponent();
 
+            Sharpnado.Shades.Initializer.Initialize(false);
+            Sharpnado.Tabs.Initializer.Initialize(true, false);
+
             //MainPage = new AppShell();
             MainPage = new HomePage();
         }
