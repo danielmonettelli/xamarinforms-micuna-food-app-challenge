@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    x:Class="XF_MicunaFood.Views.Home.Styles"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <!--#region Headline1-->
+
+    <!--#endregion-->
+
+
+    <!--#region Headline2-->
+
+    <!--#endregion-->
+
+
+    <!--#region Headline3-->
+
+    <!--#endregion-->
+
+
+    <!--#region Headline4-->
+
+    <!--#endregion-->
+
+
+    <!--#region Headline5-->
+    <Style
+        x:Key="TxtHeadLine5_1"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource colSec}" />
+        <Setter Property="FontSize" Value="{StaticResource TxtSizeH5_24}" />
+        <Setter Property="FontFamily" Value="OpenSans_ExtraBold" />
+    </Style>
+    <!--#endregion-->
+
+
+    <!--#region Headline6-->
+
+    <!--#endregion-->
+
+
+    <!--#region Title-->
+
+    <!--#endregion-->
+
+
+    <!--#region Subtitle1-->
+    <Style
+        x:Key="TxtSubtitle1_1"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource colTer}" />
+        <Setter Property="FontSize" Value="{StaticResource TxtSizeSubTit1_16}" />
+        <Setter Property="FontFamily" Value="OpenSans_Bold" />
+    </Style>
+
+    <Style
+        x:Key="TxtSubtitle1_2"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource colPrim}" />
+        <Setter Property="FontSize" Value="{StaticResource TxtSizeSubTit1_16}" />
+        <Setter Property="FontFamily" Value="OpenSans_ExtraBold" />
+    </Style>
+
+    <Style
+        x:Key="TxtSubtitle1_3"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource colQui}" />
+        <Setter Property="FontSize" Value="{StaticResource TxtSizeSubTit1_16}" />
+        <Setter Property="FontFamily" Value="OpenSans_Bold" />
+    </Style>
+    <!--#endregion-->
+
+
+    <!--#region Subtitle2-->
+    <Style
+        x:Key="TxtSubtitle2_1"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource colQua}" />
+        <Setter Property="FontSize" Value="{StaticResource TxtSizeSubTit2_14}" />
+        <Setter Property="FontFamily" Value="OpenSans_ExtraBold" />
+    </Style>
+    <!--#endregion-->
+
+
+    <!--#region Body1-->
+    <Style
+        x:Key="TxtBody1_1"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource colQua}" />
+        <Setter Property="FontSize" Value="{StaticResource TxtSizeBod1_16}" />
+        <Setter Property="FontFamily" Value="OpenSans_SemiBold" />
+    </Style>
+
+    <Style
+        x:Key="TxtBody1_2"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource colPrim}" />
+        <Setter Property="FontSize" Value="{StaticResource TxtSizeBod1_16}" />
+        <Setter Property="FontFamily" Value="OpenSans_Bold" />
+    </Style>
+    <!--#endregion-->
+
+
+    <!--#region Body2-->
+
+    <!--#endregion-->
+
+
+    <!--#region Button-->
+
+    <!--#endregion-->
+
+
+    <!--#region Caption-->
+
+    <!--#endregion-->
+
+
+    <!--#region Overline-->
+
+    <!--#endregion-->
+
+</ResourceDictionary>

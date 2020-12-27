@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace XF_MicunaFood.Themes
+namespace XF_MicunaFood.Views.Home
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class DarkTheme
+    public partial class Styles 
     {
-        public DarkTheme()
+        public Styles()
         {
             InitializeComponent();
         }

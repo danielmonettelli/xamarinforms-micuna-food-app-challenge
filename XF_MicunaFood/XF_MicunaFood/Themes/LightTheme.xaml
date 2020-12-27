@@ -9,16 +9,17 @@
     mc:Ignorable="d">
 
     <!--#region Color Range-->
-    <Color x:Key="colPrim">#6200EE</Color>
-    <Color x:Key="colSec">#000000</Color>
-    <Color x:Key="colTer">#4E4E4A</Color>
-    <Color x:Key="colQua">#4E4E4A</Color>
-    <Color x:Key="colQui">#FF000000</Color>
+    <Color x:Key="colPrim">#000000</Color>
+    <Color x:Key="colSec">#262626</Color>
+    <Color x:Key="colTer">#262626BD</Color>
+    <Color x:Key="colQua">#000000BD</Color>
+    <Color x:Key="colQui">#FFFFFF</Color>
+    <Color x:Key="colSex">#F7F7F7</Color>
     <!--#endregion-->
 
     <!--#region Backgroundcolors-->
-    <Color x:Key="colStartBG1">#F2F2F2</Color>
-    <Color x:Key="colEndBG1">#F2F2F2</Color>
+    <Color x:Key="colStartBG1">#F9F9F9</Color>
+    <Color x:Key="colEndBG1">#F9F9F9</Color>
     <Color x:Key="colStartBG2">#FEFEFE</Color>
     <Color x:Key="colEndBG2">#FEFEFE</Color>
     <!--#endregion-->

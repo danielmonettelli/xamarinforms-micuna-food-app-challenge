@@ -8,146 +8,107 @@
     xmlns:FontAwesome="clr-namespace:XF_MicunaFood.CodeFontIcons;assembly=XF_MicunaFood"
     mc:Ignorable="d">
 
-    <!--#region COLOR ICONS FONT-->
-    <Color x:Key="ColorIcon">#FFFFFF</Color>
-    <!--#endregion-->
-
-
-    <!--#region SIZE ICONS FONT-->
-    <x:Double x:Key="SizeIcon">40</x:Double>
-    <!--#endregion-->
-
-
-    <!--#region PLATFORMS OPTIONAL-->
-    <!--#region PLATFORMS CHANGE ICONS FONT FOR Glyph-->
-    <OnPlatform x:Key="OnGlyphIcon" x:TypeArguments="x:String">
-        <On Platform="Android"
-            Value="{x:Static FontAwesome:MaterialFontIcons.AccessPoint}" />
-        <On Platform="iOS"
-            Value="{x:Static FontAwesome:MaterialFontIcons.Cached}" />
-        <On Platform="UWP"
-            Value="{x:Static FontAwesome:MaterialFontIcons.AccountCardDetails}" />
-    </OnPlatform>
-    <!--#endregion-->
-
-    <!--#region PLATFORMS COLOR ICONS FONT-->
-    <OnPlatform x:Key="OnColorIcon" x:TypeArguments="Color">
-        <On Platform="Android" Value="#17D47E" />
-        <On Platform="iOS" Value="#EA29E2" />
-        <On Platform="UWP" Value="#8DFF2D" />
-    </OnPlatform>
-
-    <OnPlatform
-        x:Key="OnColorIconFlyout"
-        x:TypeArguments="Color">
-        <On Platform="Android" Value="{DynamicResource colQua}" />
-        <On Platform="iOS" Value="{DynamicResource colQua}" />
-        <On Platform="UWP" Value="#121212" />
-    </OnPlatform>
-    <!--#endregion-->
-
-    <!--#region PLATFORMS SIZE ICONS FONT-->
-    <OnPlatform x:Key="OnSizeIcon" x:TypeArguments="x:Double">
-        <On Platform="Android" Value="200" />
-        <On Platform="iOS" Value="30" />
-        <On Platform="UWP" Value="50" />
-    </OnPlatform>
-    <!--#endregion-->
-
-    <!--#region PLATFORMS IN FontImageSource-->
-    <FontImageSource
-        x:Key="OnIconDemo"
-        FontFamily="MaterialFontIcons"
-        Glyph="{StaticResource OnGlyphIcon}"
-        Size="{StaticResource OnSizeIcon}"
-        Color="{StaticResource OnColorIcon}" />
-    <!--#endregion-->
-    <!--#endregion-->
-
 
     <!--#region FontImageSource TABS-->
     <FontImageSource
-        x:Key="icon_tab_monettelliuikit"
+        x:Key="icon_tab_home_line"
         FontFamily="MonettelliFontIcons"
-        Glyph="{x:Static FontAwesome:MonettelliFontIcons.icon_brand_monettelliuikit}" />
-
-    <FontImageSource
-        x:Key="icon_brand_monettelliuikit"
-        FontFamily="MonettelliFontIcons"
-        Glyph="{x:Static FontAwesome:MonettelliFontIcons.icon_brand_monettelliuikit}"
-        Size="92"
-        Color="{DynamicResource colPrim}" />
-    <!--#endregion-->
-
-
-    <!--#region FontImageSource FLYOUT-->
-
-    <!--#region Flyout Icon-->
-    <FontImageSource
-        x:Key="icon_fly_menu"
-        FontFamily="MonettelliFontIcons"
-        Glyph="{x:Static FontAwesome:MonettelliFontIcons.icon_fly_menu}"
-        Color="{DynamicResource colQua}" />
-    <!--#endregion-->
-
-    <FontImageSource
-        x:Key="icon_fly_new"
-        FontFamily="MonettelliFontIcons"
-        Glyph="{x:Static FontAwesome:MonettelliFontIcons.icon_fly_rocket_outline}"
+        Glyph="{x:Static FontAwesome:MonettelliFontIcons.icon_tab_home_line}"
         Size="30"
-        Color="{DynamicResource colQua}" />
+        Color="{DynamicResource colQui}" />
 
     <FontImageSource
-        x:Key="icon_fly_maindashboard"
+        x:Key="icon_tab_wallet_line"
         FontFamily="MonettelliFontIcons"
-        Glyph="{x:Static FontAwesome:MonettelliFontIcons.icon_fly_view_dashboard_outline}"
+        Glyph="{x:Static FontAwesome:MonettelliFontIcons.icon_tab_wallet_line}"
         Size="30"
-        Color="{DynamicResource colQua}" />
+        Color="{DynamicResource colQui}" />
 
     <FontImageSource
-        x:Key="icon_fly_controlsandfeatures"
+        x:Key="icon_tab_conversation_line"
         FontFamily="MonettelliFontIcons"
-        Glyph="{x:Static FontAwesome:MonettelliFontIcons.icon_fly_xamarin_outline}"
+        Glyph="{x:Static FontAwesome:MonettelliFontIcons.icon_tab_conversation_line}"
         Size="30"
-        Color="{DynamicResource colQua}" />
+        Color="{DynamicResource colQui}" />
 
     <FontImageSource
-        x:Key="icon_fly_preview"
+        x:Key="icon_tab_user_line"
         FontFamily="MonettelliFontIcons"
-        Glyph="{x:Static FontAwesome:MonettelliFontIcons.icon_fly_ballot_outline}"
+        Glyph="{x:Static FontAwesome:MonettelliFontIcons.icon_tab_user_line}"
         Size="30"
-        Color="{DynamicResource colQua}" />
-
-    <FontImageSource
-        x:Key="icon_fly_allicons"
-        FontFamily="MonettelliFontIcons"
-        Glyph="{x:Static FontAwesome:MonettelliFontIcons.icon_fly_animation_outline}"
-        Size="30"
-        Color="{DynamicResource colQua}" />
-
-
-    <FontImageSource
-        x:Key="icon_fly_themes"
-        FontFamily="MonettelliFontIcons"
-        Glyph="{x:Static FontAwesome:MonettelliFontIcons.icon_fly_palette_outline}"
-        Size="30"
-        Color="{DynamicResource colQua}" />
-
-    <FontImageSource
-        x:Key="icon_fly_about"
-        FontFamily="MonettelliFontIcons"
-        Glyph="{x:Static FontAwesome:MonettelliFontIcons.icon_fly_file_document_outline}"
-        Size="30"
-        Color="{DynamicResource colQua}" />
+        Color="{DynamicResource colQui}" />
     <!--#endregion-->
 
 
     <!--#region FontImageSource INTERFACES-->
     <FontImageSource
-        x:Key="icon_love"
-        FontFamily="MaterialFontIcons"
-        Glyph="{x:Static FontAwesome:MaterialFontIcons.Heart}"
+        x:Key="icon_filter_line"
+        FontFamily="MonettelliFontIcons"
+        Glyph="{x:Static FontAwesome:MonettelliFontIcons.icon_filter_line}"
+        Size="34"
+        Color="{DynamicResource colPrim}" />
+
+    <FontImageSource
+        x:Key="icon_shopping_cart_line"
+        FontFamily="MonettelliFontIcons"
+        Glyph="{x:Static FontAwesome:MonettelliFontIcons.icon_shopping_cart_line}"
         Size="30"
+        Color="{DynamicResource colQui}" />
+
+    <FontImageSource
+        x:Key="icon_hamburger_line"
+        FontFamily="MonettelliFontIcons"
+        Glyph="{x:Static FontAwesome:MonettelliFontIcons.icon_hamburger_line}"
+        Size="40"
+        Color="{DynamicResource colPrim}" />
+
+    <FontImageSource
+        x:Key="icon_ice_cream_line"
+        FontFamily="MonettelliFontIcons"
+        Glyph="{x:Static FontAwesome:MonettelliFontIcons.icon_ice_cream_line}"
+        Size="40"
+        Color="{DynamicResource colPrim}" />
+
+    <FontImageSource
+        x:Key="icon_beer_line"
+        FontFamily="MonettelliFontIcons"
+        Glyph="{x:Static FontAwesome:MonettelliFontIcons.icon_beer_line}"
+        Size="40"
+        Color="{DynamicResource colPrim}" />
+
+    <FontImageSource
+        x:Key="icon_food_line"
+        FontFamily="MonettelliFontIcons"
+        Glyph="{x:Static FontAwesome:MonettelliFontIcons.icon_food_line}"
+        Size="40"
+        Color="{DynamicResource colPrim}" />
+
+    <FontImageSource
+        x:Key="icon_heart_line"
+        FontFamily="MonettelliFontIcons"
+        Glyph="{x:Static FontAwesome:MonettelliFontIcons.icon_heart_line}"
+        Size="22"
+        Color="{DynamicResource colPrim}" />
+
+    <FontImageSource
+        x:Key="icon_left_arrow_line"
+        FontFamily="MonettelliFontIcons"
+        Glyph="{x:Static FontAwesome:MonettelliFontIcons.icon_left_arrow_line}"
+        Size="26"
+        Color="{DynamicResource colPrim}" />
+
+    <FontImageSource
+        x:Key="icon_share_solid"
+        FontFamily="MonettelliFontIcons"
+        Glyph="{x:Static FontAwesome:MonettelliFontIcons.icon_share_solid}"
+        Size="26"
+        Color="{DynamicResource colPrim}" />
+
+    <FontImageSource
+        x:Key="icon_add_line"
+        FontFamily="MonettelliFontIcons"
+        Glyph="{x:Static FontAwesome:MonettelliFontIcons.icon_add_line}"
+        Size="15"
         Color="{DynamicResource colPrim}" />
     <!--#endregion-->
 
