@@ -93,7 +93,7 @@
                         <ColumnDefinition Width="0.04*" />
                     </Grid.ColumnDefinitions>
 
-
+                    <!--  Top Icons and Labels  -->
                     <Image
                         Grid.Row="1"
                         Grid.Column="1"
@@ -121,6 +121,7 @@
                         Style="{StaticResource TxtSubtitle1_1}" />
 
 
+                    <!--  Category List  -->
                     <FlexLayout
                         x:Name="CategoryList"
                         Grid.Row="8"
@@ -160,7 +161,8 @@
                         </BindableLayout.ItemTemplate>
                     </FlexLayout>
 
-
+                    
+                    <!--  Dynamic Food List  -->
                     <CollectionView
                         x:Name="collectionView_MicunaFood"
                         Grid.Row="10"
@@ -315,6 +317,7 @@
                     </CollectionView>
 
 
+                    <!--  List of All Foods  -->
                     <CarouselView
                         x:Name="carouselView_MicunaFood"
                         Grid.Row="12"
@@ -436,7 +439,8 @@
                 </Grid>
             </ScrollView>
 
-
+            
+            <!--  Elegant TabView  -->
             <tabs:TabHostView
                 Grid.Row="1"
                 Grid.Column="1"
