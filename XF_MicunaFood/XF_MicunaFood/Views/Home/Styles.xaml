@@ -2,7 +2,8 @@
 <ResourceDictionary
     x:Class="XF_MicunaFood.Views.Home.Styles"
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView">
 
     <!--#region Headline1-->
 
@@ -119,6 +120,56 @@
 
     <!--#region Overline-->
 
+    <!--#endregion-->
+
+
+    <!--#region Visual States Manager-->
+    <Style
+        x:Key="vsm_labelCategory"
+        TargetType="Label">
+
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="{DynamicResource colPrim}" />
+                        </VisualState.Setters>
+                    </VisualState>
+
+                    <VisualState x:Name="Selected">
+                        <VisualState.Setters>
+                            <Setter Property="TextColor" Value="{DynamicResource colQui}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+
+    <Style
+        x:Key="vsm_surfaceCategory"
+        TargetType="yummy:PancakeView">
+
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="BackgroundColor" Value="{DynamicResource colQui}" />
+                        </VisualState.Setters>
+                    </VisualState>
+
+                    <VisualState x:Name="Selected">
+                        <VisualState.Setters>
+                            <Setter Property="BackgroundColor" Value="{DynamicResource colPrim}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
     <!--#endregion-->
 
 </ResourceDictionary>

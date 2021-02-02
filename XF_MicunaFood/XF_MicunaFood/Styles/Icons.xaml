@@ -52,35 +52,7 @@
         x:Key="icon_shopping_cart_line"
         FontFamily="MonettelliFontIcons"
         Glyph="{x:Static FontAwesome:MonettelliFontIcons.icon_shopping_cart_line}"
-        Size="30"
-        Color="{DynamicResource colQui}" />
-
-    <FontImageSource
-        x:Key="icon_hamburger_line"
-        FontFamily="MonettelliFontIcons"
-        Glyph="{x:Static FontAwesome:MonettelliFontIcons.icon_hamburger_line}"
-        Size="40"
-        Color="{DynamicResource colPrim}" />
-
-    <FontImageSource
-        x:Key="icon_ice_cream_line"
-        FontFamily="MonettelliFontIcons"
-        Glyph="{x:Static FontAwesome:MonettelliFontIcons.icon_ice_cream_line}"
-        Size="40"
-        Color="{DynamicResource colPrim}" />
-
-    <FontImageSource
-        x:Key="icon_beer_line"
-        FontFamily="MonettelliFontIcons"
-        Glyph="{x:Static FontAwesome:MonettelliFontIcons.icon_beer_line}"
-        Size="40"
-        Color="{DynamicResource colPrim}" />
-
-    <FontImageSource
-        x:Key="icon_food_line"
-        FontFamily="MonettelliFontIcons"
-        Glyph="{x:Static FontAwesome:MonettelliFontIcons.icon_food_line}"
-        Size="40"
+        Size="74"
         Color="{DynamicResource colPrim}" />
 
     <FontImageSource
@@ -88,7 +60,7 @@
         FontFamily="MonettelliFontIcons"
         Glyph="{x:Static FontAwesome:MonettelliFontIcons.icon_heart_line}"
         Size="22"
-        Color="{DynamicResource colPrim}" />
+        Color="{DynamicResource colQui}" />
 
     <FontImageSource
         x:Key="icon_left_arrow_line"

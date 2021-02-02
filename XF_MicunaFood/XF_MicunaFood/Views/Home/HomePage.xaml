@@ -2,7 +2,11 @@
 <ContentPage
     x:Class="XF_MicunaFood.Views.HomePage"
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:tabs="http://sharpnado.com"
+    xmlns:sh="clr-namespace:Sharpnado.Shades;assembly=Sharpnado.Shadows"
+    xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms">
 
 
     <ContentPage.Resources>
@@ -12,59 +16,464 @@
 
     <ContentPage.Content>
 
-        <ScrollView>
 
-            <Grid>
+        <Grid>
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                    <GradientStop Offset="0.1" Color="{DynamicResource colStartBG1}" />
+                    <GradientStop Offset="1.0" Color="{DynamicResource colEndBG1}" />
+                </LinearGradientBrush>
+            </Grid.Background>
 
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="0.87*" />
-                    <RowDefinition Height="0.107*" />
-                    <RowDefinition Height="0.023*" />
-                </Grid.RowDefinitions>
+            <Grid.RowDefinitions>
+                <!--  0  -->
+                <RowDefinition Height="0.869*" />
+                <!--  1  -->
+                <RowDefinition Height="Auto" />
+                <!--  2  -->
+                <RowDefinition Height="18" />
+            </Grid.RowDefinitions>
 
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.04*" />
-                    <ColumnDefinition Width="0.92*" />
-                    <ColumnDefinition Width="0.04*" />
-                </Grid.ColumnDefinitions>
+            <Grid.ColumnDefinitions>
+                <!--  0  -->
+                <ColumnDefinition Width="0.04*" />
+                <!--  1  -->
+                <ColumnDefinition Width="0.92*" />
+                <!--  2  -->
+                <ColumnDefinition Width="0.04*" />
+            </Grid.ColumnDefinitions>
 
 
-                <Grid
-                    Grid.RowSpan="3"
-                    Grid.ColumnSpan="3">
+            <ScrollView
+                Grid.RowSpan="3"
+                Grid.ColumnSpan="3">
+                <Grid>
 
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="0.03*" />
-                        <RowDefinition Height="0.023*" />
-                        <RowDefinition Height="0.07*" />
-                        <RowDefinition Height="0.02*" />
-                        <RowDefinition Height="0.041*" />
-                        <RowDefinition Height="0.01*" />
-                        <RowDefinition Height="0.028*" />
-                        <RowDefinition Height="0.03*" />
-                        <RowDefinition Height="0.088*" />
-                        <RowDefinition Height="0.04*" />
-                        <RowDefinition Height="0.361*" />
-                        <RowDefinition Height="0.04*" />
-                        <RowDefinition Height="0.015*" />
-                        <RowDefinition Height="0.182*" />
-                        <RowDefinition Height="0.022*" />
+                        <!--  0  -->
+                        <RowDefinition Height="24" />
+                        <!--  1  -->
+                        <RowDefinition Height="Auto" />
+                        <!--  2  -->
+                        <RowDefinition Height="56" />
+                        <!--  3  -->
+                        <RowDefinition Height="16" />
+                        <!--  4  -->
+                        <RowDefinition Height="Auto" />
+                        <!--  5  -->
+                        <RowDefinition Height="8" />
+                        <!--  6  -->
+                        <RowDefinition Height="Auto" />
+                        <!--  7  -->
+                        <RowDefinition Height="24" />
+                        <!--  8  -->
+                        <RowDefinition Height="70" />
+                        <!--  9  -->
+                        <RowDefinition Height="32" />
+                        <!--  10  -->
+                        <RowDefinition Height="Auto" />
+                        <!--  11  -->
+                        <RowDefinition Height="32" />
+                        <!--  12  -->
+                        <RowDefinition Height="Auto" />
+                        <!--  13  -->
+                        <RowDefinition Height="122" />
                     </Grid.RowDefinitions>
 
                     <Grid.ColumnDefinitions>
+                        <!--  0  -->
                         <ColumnDefinition Width="0.04*" />
+                        <!--  1  -->
                         <ColumnDefinition Width="0.087*" />
+                        <!--  2  -->
                         <ColumnDefinition Width="0.68*" />
+                        <!--  3  -->
                         <ColumnDefinition Width="0.153*" />
+                        <!--  4  -->
                         <ColumnDefinition Width="0.04*" />
                     </Grid.ColumnDefinitions>
 
+
+                    <Image
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Source="{StaticResource icon_filter_line}" />
+
+                    <Image
+                        Grid.Row="1"
+                        Grid.RowSpan="2"
+                        Grid.Column="3"
+                        Source="{StaticResource icon_shopping_cart_line}" />
+
+                    <Label
+                        Grid.Row="4"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2"
+                        Text="Delicious Food"
+                        Style="{StaticResource TxtHeadLine5_1}" />
+
+                    <Label
+                        Grid.Row="6"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2"
+                        MaxLines="2"
+                        Text="We made fresh and Healthy food"
+                        Style="{StaticResource TxtSubtitle1_1}" />
+
+
+                    <FlexLayout
+                        x:Name="CategoryList"
+                        Grid.Row="8"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="3"
+                        Direction="Row"
+                        JustifyContent="SpaceBetween"
+                        BindableLayout.ItemsSource="{Binding Categories}">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <yummy:PancakeView
+                                    CornerRadius="20"
+                                    WidthRequest="70"
+                                    HasShadow="True"
+                                    Style="{StaticResource vsm_surfaceCategory}">
+                                    <yummy:PancakeView.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="SelectedCategory_Tapped" />
+                                    </yummy:PancakeView.GestureRecognizers>
+                                    <StackLayout
+                                        VerticalOptions="FillAndExpand"
+                                        HorizontalOptions="FillAndExpand">
+                                        <Label
+                                            x:Name="ImageCategory"
+                                            HorizontalOptions="CenterAndExpand"
+                                            VerticalOptions="CenterAndExpand"
+                                            Text="{Binding Image_Category}"
+                                            FontFamily="MonettelliFontIcons"
+                                            FontSize="40"
+                                            Style="{StaticResource vsm_labelCategory}" />
+                                        <Label
+                                            x:Name="LabelCategory"
+                                            IsVisible="false"
+                                            Text="{Binding Name_Category}" />
+                                    </StackLayout>
+                                </yummy:PancakeView>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </FlexLayout>
+
+
+                    <CollectionView
+                        x:Name="collectionView_MicunaFood"
+                        Grid.Row="10"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="4"
+                        ItemsSource="{Binding DynamicFoods}"
+                        SelectionMode="Single"
+                        HeightRequest="288">
+
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout
+                                Orientation="Horizontal"
+                                HorizontalItemSpacing="35" />
+                        </CollectionView.ItemsLayout>
+
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+
+                                <Grid WidthRequest="190">
+
+                                    <Grid.RowDefinitions>
+                                        <!--  0  -->
+                                        <RowDefinition Height="103" />
+                                        <!--  1  -->
+                                        <RowDefinition Height="59" />
+                                        <!--  2  -->
+                                        <RowDefinition Height="126" />
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <!--  0  -->
+                                        <ColumnDefinition Width="15" />
+                                        <!--  1  -->
+                                        <ColumnDefinition Width="160" />
+                                        <!--  2  -->
+                                        <ColumnDefinition Width="15" />
+                                    </Grid.ColumnDefinitions>
+
+
+                                    <Frame
+                                        Grid.Row="1"
+                                        Grid.RowSpan="2"
+                                        Grid.Column="0"
+                                        Grid.ColumnSpan="3"
+                                        CornerRadius="20">
+                                        <Frame.Background>
+                                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                                <GradientStop Offset="0.1" Color="{StaticResource colStartSurf1}" />
+                                                <GradientStop Offset="1.0" Color="{StaticResource colEndSurf1}" />
+                                            </LinearGradientBrush>
+                                        </Frame.Background>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <!--  0  -->
+                                                <RowDefinition Height="0.32*" />
+                                                <!--  1  -->
+                                                <RowDefinition Height="0.086*" />
+                                                <!--  2  -->
+                                                <RowDefinition Height="Auto" />
+                                                <!--  3  -->
+                                                <RowDefinition Height="0.043*" />
+                                                <!--  4  -->
+                                                <RowDefinition Height="Auto" />
+                                                <!--  5  -->
+                                                <RowDefinition Height="0.032*" />
+                                                <!--  6  -->
+                                                <RowDefinition Height="0.054*" />
+                                                <!--  7  -->
+                                                <RowDefinition Height="Auto" />
+                                                <!--  8  -->
+                                                <RowDefinition Height="0.043*" />
+                                                <!--  9  -->
+                                                <RowDefinition Height="0.079*" />
+                                            </Grid.RowDefinitions>
+
+                                            <Grid.ColumnDefinitions>
+                                                <!--  0  -->
+                                                <ColumnDefinition Width="0.08*" />
+                                                <!--  1  -->
+                                                <ColumnDefinition Width="0.042*" />
+                                                <!--  2  -->
+                                                <ColumnDefinition Width="0.462*" />
+                                                <!--  3  -->
+                                                <ColumnDefinition Width="0.126*" />
+                                                <!--  4  -->
+                                                <ColumnDefinition Width="0.168*" />
+                                                <!--  5  -->
+                                                <ColumnDefinition Width="0.042*" />
+                                                <!--  6  -->
+                                                <ColumnDefinition Width="0.08*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <Label
+                                                Grid.Row="2"
+                                                Grid.Column="2"
+                                                Grid.ColumnSpan="3"
+                                                Text="{Binding Name_Food}"
+                                                Style="{StaticResource TxtSubtitle1_2}" />
+
+                                            <Label
+                                                Grid.Row="4"
+                                                Grid.Column="2"
+                                                Grid.ColumnSpan="3"
+                                                MaxLines="2"
+                                                Text="{Binding Short_Description_Food}"
+                                                Style="{StaticResource TxtSubtitle2_1}" />
+
+                                            <Label
+                                                Grid.Row="7"
+                                                Grid.Column="2"
+                                                Text="{Binding Price_Food, StringFormat='{0:C2}'}"
+                                                Style="{StaticResource TxtSubtitle1_2}" />
+
+                                            <yummy:PancakeView
+                                                Grid.Row="6"
+                                                Grid.RowSpan="3"
+                                                Grid.Column="4"
+                                                Grid.ColumnSpan="2"
+                                                CornerRadius="80"
+                                                BackgroundColor="{DynamicResource colPrim}">
+                                                <Image
+                                                    Grid.Row="0"
+                                                    Grid.RowSpan="2"
+                                                    Grid.Column="1"
+                                                    HorizontalOptions="Center"
+                                                    VerticalOptions="Center"
+                                                    TranslationY="1"
+                                                    TranslationX="1"
+                                                    Source="{StaticResource icon_heart_line}" />
+                                            </yummy:PancakeView>
+
+                                        </Grid>
+
+                                    </Frame>
+
+                                    <ffimageloading:CachedImage
+                                        Grid.Row="0"
+                                        Grid.RowSpan="2"
+                                        Grid.Column="1"
+                                        CacheDuration="30"
+                                        DownsampleToViewSize="True"
+                                        FadeAnimationForCachedImages="True"
+                                        FadeAnimationEnabled="True"
+                                        FadeAnimationDuration="100"
+                                        Source="{Binding Image_Food}" />
+
+                                </Grid>
+
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+
+                    </CollectionView>
+
+
+                    <CarouselView
+                        x:Name="carouselView_MicunaFood"
+                        Grid.Row="12"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="3"
+                        HeightRequest="157"
+                        ItemsSource="{Binding Foods}">
+
+                        <CarouselView.ItemsLayout>
+                            <LinearItemsLayout
+                                Orientation="Horizontal"
+                                SnapPointsType="MandatorySingle" />
+                        </CarouselView.ItemsLayout>
+
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <!--  0  -->
+                                        <RowDefinition Height="0.076*" />
+                                        <!--  1  -->
+                                        <RowDefinition Height="0.924*" />
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <!--  0  -->
+                                        <ColumnDefinition Width="0.577*" />
+                                        <!--  1  -->
+                                        <ColumnDefinition Width="0.196*" />
+                                        <!--  2  -->
+                                        <ColumnDefinition Width="0.227*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Frame
+                                        Grid.Row="1"
+                                        Grid.Column="0"
+                                        Grid.ColumnSpan="2"
+                                        CornerRadius="20"
+                                        HeightRequest="145">
+                                        <Frame.Background>
+                                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                                <GradientStop Offset="0.1" Color="{StaticResource colStartSurf1}" />
+                                                <GradientStop Offset="1.0" Color="{StaticResource colEndSurf1}" />
+                                            </LinearGradientBrush>
+                                        </Frame.Background>
+
+                                        <Grid>
+
+                                            <Grid.RowDefinitions>
+                                                <!--  0  -->
+                                                <RowDefinition Height="0.2*" />
+                                                <!--  1  -->
+                                                <RowDefinition Height="Auto" />
+                                                <!--  2  -->
+                                                <RowDefinition Height="0.055*" />
+                                                <!--  3  -->
+                                                <RowDefinition Height="Auto" />
+                                                <!--  4  -->
+                                                <RowDefinition Height="0.11*" />
+                                                <!--  5  -->
+                                                <RowDefinition Height="Auto" />
+                                                <!--  6  -->
+                                                <RowDefinition Height="0.2*" />
+                                            </Grid.RowDefinitions>
+
+                                            <Grid.ColumnDefinitions>
+                                                <!--  0  -->
+                                                <ColumnDefinition Width="23" />
+                                                <!--  1  -->
+                                                <ColumnDefinition Width="0.49*" />
+                                                <!--  2  -->
+                                                <ColumnDefinition Width="0.064*" />
+                                                <!--  3  -->
+                                                <ColumnDefinition Width="0.422*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <Label
+                                                Grid.Row="1"
+                                                Grid.Column="1"
+                                                Text="{Binding Name_Food}"
+                                                Style="{StaticResource TxtSubtitle1_2}" />
+
+                                            <Label
+                                                Grid.Row="3"
+                                                Grid.Column="1"
+                                                MaxLines="3"
+                                                Text="{Binding Short_Description_Food}"
+                                                Style="{StaticResource TxtSubtitle2_1}" />
+
+                                            <Label
+                                                Grid.Row="5"
+                                                Grid.Column="1"
+                                                Text="{Binding Price_Food, StringFormat='{0:C2}'}"
+                                                Style="{StaticResource TxtSubtitle1_2}" />
+
+                                        </Grid>
+
+                                    </Frame>
+
+                                    <ffimageloading:CachedImage
+                                        Grid.Row="0"
+                                        Grid.RowSpan="2"
+                                        Grid.Column="1"
+                                        Grid.ColumnSpan="2"
+                                        CacheDuration="30"
+                                        DownsampleToViewSize="True"
+                                        FadeAnimationForCachedImages="True"
+                                        FadeAnimationEnabled="True"
+                                        FadeAnimationDuration="100"
+                                        Source="{Binding Image_Food}" />
+
+                                </Grid>
+
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+
+                    </CarouselView>
                 </Grid>
+            </ScrollView>
 
 
-            </Grid>
+            <tabs:TabHostView
+                Grid.Row="1"
+                Grid.Column="1"
+                HeightRequest="86"
+                CornerRadius="35"
+                IsSegmented="True"
+                Shades="{sh:ShadeStack}"
+                BackgroundColor="{DynamicResource colPrim}"
+                TabType="Fixed">
 
-        </ScrollView>
+                <tabs:TabHostView.Tabs>
+
+                    <tabs:BottomTabItem
+                        IconImageSource="{StaticResource icon_tab_home_line}"
+                        IsTextVisible="False"
+                        SelectedTabColor="{DynamicResource colTer}" />
+
+                    <tabs:BottomTabItem
+                        IconImageSource="{StaticResource icon_tab_wallet_line}"
+                        IsTextVisible="False"
+                        SelectedTabColor="{DynamicResource colTer}" />
+
+                    <tabs:BottomTabItem
+                        IconImageSource="{StaticResource icon_tab_conversation_line}"
+                        IsTextVisible="False"
+                        SelectedTabColor="{DynamicResource colTer}" />
+
+                    <tabs:BottomTabItem
+                        IconImageSource="{StaticResource icon_tab_user_line}"
+                        IsTextVisible="False"
+                        SelectedTabColor="{DynamicResource colTer}" />
+
+                </tabs:TabHostView.Tabs>
+            </tabs:TabHostView>
+
+        </Grid>
+
 
     </ContentPage.Content>
 

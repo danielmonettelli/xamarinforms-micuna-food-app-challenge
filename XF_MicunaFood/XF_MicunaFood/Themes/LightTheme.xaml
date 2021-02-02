@@ -11,8 +11,8 @@
     <!--#region Color Range-->
     <Color x:Key="colPrim">#000000</Color>
     <Color x:Key="colSec">#262626</Color>
-    <Color x:Key="colTer">#262626BD</Color>
-    <Color x:Key="colQua">#000000BD</Color>
+    <Color x:Key="colTer">#585858</Color>
+    <Color x:Key="colQua">#3C3C3C</Color>
     <Color x:Key="colQui">#FFFFFF</Color>
     <Color x:Key="colSex">#F7F7F7</Color>
     <!--#endregion-->

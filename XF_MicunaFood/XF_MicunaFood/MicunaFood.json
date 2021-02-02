@@ -1,0 +1,87 @@
+﻿{
+  "Foods": [
+    {
+      "Id": 1,
+      "VarietyFood": {
+        "Name_VarietyFood": "Food"
+      },
+      "Name_Food": "Black ramen",
+      "Image_Food": "https://raw.githubusercontent.com/danielmonettelli/Area51/main/Foods/img_black_ramen.png",
+      "Price_Food": 30.00,
+      "Short_Description_Food": "Thick and milky broth with an intense flavor.",
+      "Long_Description_Food": "Our Hakata Black Ramen is a rich and thick stock tonkotsu ramen typical of the Hakata area, in Fukuoka (south of the country), which is made by cooking pork bones for hours to obtain a thick and milky broth with an intense flavor that is It is accompanied by strong flavors such as garlic or ginger, resulting in a powerful umami."
+    },
+
+    {
+      "Id": 2,
+      "VarietyFood": {
+        "Name_VarietyFood": "Food"
+      },
+      "Name_Food": "Avocado of the gods",
+      "Image_Food": "https://raw.githubusercontent.com/danielmonettelli/Area51/main/Foods/img_avocado_of_the_gods.png",
+      "Price_Food": 14.00,
+      "Short_Description_Food": "Whole wheat toast with avocado cream and boiled egg.",
+      "Long_Description_Food": "From time to time we also like to have toast for breakfast. And since we know that many of you do not know very well what to accompany them, here is an idea of ​​a complete and healthy breakfast: whole wheat toast with avocado cream and boiled egg, the perfect combination to fill you with energy."
+    },
+
+    {
+      "Id": 3,
+      "VarietyFood": {
+        "Name_VarietyFood": "Food"
+      },
+      "Name_Food": "Arctic salad",
+      "Image_Food": "https://raw.githubusercontent.com/danielmonettelli/Area51/main/Foods/img_arctic_salad.png",
+      "Price_Food": 26.00,
+      "Short_Description_Food": "Lorem ipsum dolor sit amet",
+      "Long_Description_Food": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum."
+    },
+
+    {
+      "Id": 4,
+      "VarietyFood": {
+        "Name_VarietyFood": "Food"
+      },
+      "Name_Food": "Vegetable streaky",
+      "Image_Food": "https://raw.githubusercontent.com/danielmonettelli/Area51/main/Foods/img_vegetable_streaky.png",
+      "Price_Food": 19.00,
+      "Short_Description_Food": "Lorem ipsum dolor sit amet",
+      "Long_Description_Food": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum."
+    },
+
+    {
+      "Id": 5,
+      "VarietyFood": {
+        "Name_VarietyFood": "Food"
+      },
+      "Name_Food": "Pumpkin cream",
+      "Image_Food": "https://raw.githubusercontent.com/danielmonettelli/Area51/main/Foods/img_pumpkin_cream.png",
+      "Price_Food": 27.00,
+      "Short_Description_Food": "Lorem ipsum dolor sit amet",
+      "Long_Description_Food": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum."
+    },
+
+    {
+      "Id": 6,
+      "VarietyFood": {
+        "Name_VarietyFood": "Food"
+      },
+      "Name_Food": "Paradise salad",
+      "Image_Food": "https://raw.githubusercontent.com/danielmonettelli/Area51/main/Foods/img_paradise_salad.png",
+      "Price_Food": 24.00,
+      "Short_Description_Food": "Lorem ipsum dolor sit amet",
+      "Long_Description_Food": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum."
+    },
+
+    {
+      "Id": 7,
+      "VarietyFood": {
+        "Name_VarietyFood": "Food"
+      },
+      "Name_Food": "Fruit salad",
+      "Image_Food": "https://raw.githubusercontent.com/danielmonettelli/Area51/main/Foods/img_fruit_salad.png",
+      "Price_Food": 19.00,
+      "Short_Description_Food": "Lorem ipsum dolor sit amet",
+      "Long_Description_Food": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum."
+    }
+  ]
+}
