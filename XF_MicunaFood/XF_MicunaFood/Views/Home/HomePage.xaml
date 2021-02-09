@@ -6,7 +6,8 @@
     xmlns:tabs="http://sharpnado.com"
     xmlns:sh="clr-namespace:Sharpnado.Shades;assembly=Sharpnado.Shadows"
     xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
-    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms">
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
 
 
     <ContentPage.Resources>
@@ -97,12 +98,15 @@
                     <Image
                         Grid.Row="1"
                         Grid.Column="1"
+                        xct:TouchEffect.NativeAnimation="True"
                         Source="{StaticResource icon_filter_line}" />
 
                     <Image
                         Grid.Row="1"
                         Grid.RowSpan="2"
                         Grid.Column="3"
+                        xct:TouchEffect.NativeAnimation="True"
+                        VerticalOptions="Start"
                         Source="{StaticResource icon_shopping_cart_line}" />
 
                     <Label
@@ -296,7 +300,7 @@
                                                     HorizontalOptions="Center"
                                                     VerticalOptions="Center"
                                                     TranslationY="1"
-                                                    TranslationX="1"
+                                                    TranslationX="0.2"
                                                     Source="{StaticResource icon_heart_line}" />
                                             </yummy:PancakeView>
 
@@ -459,7 +463,10 @@
                 HeightRequest="86"
                 CornerRadius="35"
                 IsSegmented="True"
-                Shades="{sh:ShadeStack}"
+                Shades="{sh:SingleShade Offset='0,8',
+                                        BlurRadius=20,
+                                        Color=#323232,
+                                        Opacity=0.8}"
                 BackgroundColor="{DynamicResource colPrim}"
                 TabType="Fixed">
 
