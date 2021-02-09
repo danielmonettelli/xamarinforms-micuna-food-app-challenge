@@ -135,7 +135,7 @@
                                 <yummy:PancakeView
                                     CornerRadius="20"
                                     WidthRequest="70"
-                                    HasShadow="True"
+                                    Shadow="{yummy:ShadowMarkup}"
                                     Style="{StaticResource vsm_surfaceCategory}">
                                     <yummy:PancakeView.GestureRecognizers>
                                         <TapGestureRecognizer Tapped="SelectedCategory_Tapped" />
@@ -161,7 +161,7 @@
                         </BindableLayout.ItemTemplate>
                     </FlexLayout>
 
-                    
+
                     <!--  Dynamic Food List  -->
                     <CollectionView
                         x:Name="collectionView_MicunaFood"
@@ -202,18 +202,24 @@
                                     </Grid.ColumnDefinitions>
 
 
-                                    <Frame
+                                    <yummy:PancakeView
                                         Grid.Row="1"
                                         Grid.RowSpan="2"
                                         Grid.Column="0"
                                         Grid.ColumnSpan="3"
-                                        CornerRadius="20">
-                                        <Frame.Background>
-                                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                                                <GradientStop Offset="0.1" Color="{StaticResource colStartSurf1}" />
-                                                <GradientStop Offset="1.0" Color="{StaticResource colEndSurf1}" />
-                                            </LinearGradientBrush>
-                                        </Frame.Background>
+                                        Margin="3,0,3,3"
+                                        CornerRadius="20"
+                                        Shadow="{yummy:ShadowMarkup BlurRadius=3}">
+                                        <yummy:PancakeView.BackgroundGradientStops>
+                                            <yummy:GradientStopCollection>
+                                                <yummy:GradientStop
+                                                    Offset="0"
+                                                    Color="{StaticResource colStartSurf1}" />
+                                                <yummy:GradientStop
+                                                    Offset="1"
+                                                    Color="{StaticResource colEndSurf1}" />
+                                            </yummy:GradientStopCollection>
+                                        </yummy:PancakeView.BackgroundGradientStops>
                                         <Grid>
                                             <Grid.RowDefinitions>
                                                 <!--  0  -->
@@ -296,7 +302,7 @@
 
                                         </Grid>
 
-                                    </Frame>
+                                    </yummy:PancakeView>
 
                                     <ffimageloading:CachedImage
                                         Grid.Row="0"
@@ -352,18 +358,24 @@
                                         <ColumnDefinition Width="0.227*" />
                                     </Grid.ColumnDefinitions>
 
-                                    <Frame
+                                    <yummy:PancakeView
                                         Grid.Row="1"
                                         Grid.Column="0"
                                         Grid.ColumnSpan="2"
+                                        Margin="3,3,0,3"
                                         CornerRadius="20"
-                                        HeightRequest="145">
-                                        <Frame.Background>
-                                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                                                <GradientStop Offset="0.1" Color="{StaticResource colStartSurf1}" />
-                                                <GradientStop Offset="1.0" Color="{StaticResource colEndSurf1}" />
-                                            </LinearGradientBrush>
-                                        </Frame.Background>
+                                        HeightRequest="145"
+                                        Shadow="{yummy:ShadowMarkup BlurRadius=3}">
+                                        <yummy:PancakeView.BackgroundGradientStops>
+                                            <yummy:GradientStopCollection>
+                                                <yummy:GradientStop
+                                                    Offset="0"
+                                                    Color="{StaticResource colStartSurf1}" />
+                                                <yummy:GradientStop
+                                                    Offset="1"
+                                                    Color="{StaticResource colEndSurf1}" />
+                                            </yummy:GradientStopCollection>
+                                        </yummy:PancakeView.BackgroundGradientStops>
 
                                         <Grid>
 
@@ -416,7 +428,7 @@
 
                                         </Grid>
 
-                                    </Frame>
+                                    </yummy:PancakeView>
 
                                     <ffimageloading:CachedImage
                                         Grid.Row="0"
@@ -439,7 +451,7 @@
                 </Grid>
             </ScrollView>
 
-            
+
             <!--  Elegant TabView  -->
             <tabs:TabHostView
                 Grid.Row="1"
@@ -456,22 +468,26 @@
                     <tabs:BottomTabItem
                         IconImageSource="{StaticResource icon_tab_home_line}"
                         IsTextVisible="False"
-                        SelectedTabColor="{DynamicResource colTer}" />
+                        SelectedTabColor="{DynamicResource colTer}"
+                        UnselectedIconColor="{DynamicResource colQui}" />
 
                     <tabs:BottomTabItem
                         IconImageSource="{StaticResource icon_tab_wallet_line}"
                         IsTextVisible="False"
-                        SelectedTabColor="{DynamicResource colTer}" />
+                        SelectedTabColor="{DynamicResource colTer}"
+                        UnselectedIconColor="{DynamicResource colQui}" />
 
                     <tabs:BottomTabItem
                         IconImageSource="{StaticResource icon_tab_conversation_line}"
                         IsTextVisible="False"
-                        SelectedTabColor="{DynamicResource colTer}" />
+                        SelectedTabColor="{DynamicResource colTer}"
+                        UnselectedIconColor="{DynamicResource colQui}" />
 
                     <tabs:BottomTabItem
                         IconImageSource="{StaticResource icon_tab_user_line}"
                         IsTextVisible="False"
-                        SelectedTabColor="{DynamicResource colTer}" />
+                        SelectedTabColor="{DynamicResource colTer}"
+                        UnselectedIconColor="{DynamicResource colQui}" />
 
                 </tabs:TabHostView.Tabs>
             </tabs:TabHostView>
