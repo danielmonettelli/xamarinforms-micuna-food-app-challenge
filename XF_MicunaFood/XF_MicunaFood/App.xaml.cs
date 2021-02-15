@@ -16,7 +16,7 @@ namespace XF_MicunaFood
             Sharpnado.Tabs.Initializer.Initialize(true, false);
 
             //MainPage = new AppShell();
-            MainPage = new HomePage();
+            MainPage = new NavigationPage(new HomePage());
         }
 
         protected override void OnStart()
