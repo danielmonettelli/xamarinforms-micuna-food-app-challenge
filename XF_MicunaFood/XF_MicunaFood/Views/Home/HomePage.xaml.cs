@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.PancakeView;
 using Xamarin.Forms.Xaml;
+using XF_MicunaFood.Models;
+using XF_MicunaFood.ViewModels.Base;
 using XF_MicunaFood.ViewModels.Home;
 
 namespace XF_MicunaFood.Views
@@ -55,6 +57,18 @@ namespace XF_MicunaFood.Views
             VisualStateManager.GoToState(imageCategory, visualState);
 
             homeViewModel.GetItemsForCategory(labelCategory.Text, isSelected);
+        }
+
+        private async void CollectionView_SelectedItem(object sender, SelectionChangedEventArgs e)
+        {
+            var selectedItem = e.CurrentSelection.FirstOrDefault();
+
+            if (selectedItem != null)
+            {
+                await Navigation.PushAsync(new FoodDetailPage(selectedItem as FoodsViewModel));
+            }
+
+            collectionView_MicunaFood.SelectedItem = null;
         }
     }
 }

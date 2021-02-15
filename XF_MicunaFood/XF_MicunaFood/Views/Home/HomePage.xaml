@@ -7,7 +7,8 @@
     xmlns:sh="clr-namespace:Sharpnado.Shades;assembly=Sharpnado.Shadows"
     xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
-    xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    NavigationPage.HasNavigationBar="false">
 
 
     <ContentPage.Resources>
@@ -173,8 +174,9 @@
                         Grid.Column="1"
                         Grid.ColumnSpan="4"
                         ItemsSource="{Binding DynamicFoods}"
+                        HeightRequest="288"
                         SelectionMode="Single"
-                        HeightRequest="288">
+                        SelectionChanged="CollectionView_SelectedItem">
 
                         <CollectionView.ItemsLayout>
                             <GridItemsLayout
