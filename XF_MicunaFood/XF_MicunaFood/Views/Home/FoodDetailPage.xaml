@@ -2,7 +2,13 @@
 <ContentPage
     x:Class="XF_MicunaFood.Views.FoodDetailPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    ios:Page.UseSafeArea="True"
+    NavigationPage.HasNavigationBar="True">
 
 
     <ContentPage.Resources>
@@ -17,32 +23,160 @@
             <Grid>
 
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="0.03*" />
-                    <RowDefinition Height="0.033*" />
-                    <RowDefinition Height="0.03*" />
-                    <RowDefinition Height="0.47*" />
+                    <!--  0  -->
+                    <RowDefinition Height="13" />
+                    <!--  1  -->
+                    <RowDefinition Height="48" />
+                    <!--  2  -->
+                    <RowDefinition Height="13" />
+                    <!--  3  -->
+                    <RowDefinition Height="374" />
+                    <!--  4  -->
+                    <RowDefinition Height="32" />
+                    <!--  5  -->
+                    <RowDefinition Height="Auto" />
+                    <!--  6  -->
+                    <RowDefinition Height="16" />
+                    <!--  7  -->
+                    <RowDefinition Height="Auto" />
+                    <!--  8  -->
                     <RowDefinition Height="0.04*" />
-                    <RowDefinition Height="0.041*" />
-                    <RowDefinition Height="0.02*" />
-                    <RowDefinition Height="0.168*" />
-                    <RowDefinition Height="0.04*" />
-                    <RowDefinition Height="0.02*" />
-                    <RowDefinition Height="0.028*" />
-                    <RowDefinition Height="0.01*" />
-                    <RowDefinition Height="0.028*" />
-                    <RowDefinition Height="0.013*" />
-                    <RowDefinition Height="0.029*" />
+                    <!--  9  -->
+                    <RowDefinition Height="16" />
+                    <!--  10  -->
+                    <RowDefinition Height="Auto" />
+                    <!--  11  -->
+                    <RowDefinition Height="8" />
+                    <!--  12  -->
+                    <RowDefinition Height="Auto" />
+                    <!--  13  -->
+                    <RowDefinition Height="10" />
+                    <!--  14  -->
+                    <RowDefinition Height="25" />
                 </Grid.RowDefinitions>
 
                 <Grid.ColumnDefinitions>
+                    <!--  0  -->
+                    <ColumnDefinition Width="0.01*" />
+                    <!--  1  -->
                     <ColumnDefinition Width="0.04*" />
-                    <ColumnDefinition Width="0.04*" />
-                    <ColumnDefinition Width="0.28*" />
+                    <!--  2  -->
+                    <ColumnDefinition Width="32" />
+                    <!--  3  -->
+                    <ColumnDefinition Width="0.23*" />
+                    <!--  4  -->
                     <ColumnDefinition Width="0.126*" />
-                    <ColumnDefinition Width="0.455*" />
-                    <ColumnDefinition Width="0.019*" />
+                    <!--  5  -->
+                    <ColumnDefinition Width="161" />
+                    <!--  6  -->
+                    <ColumnDefinition Width="32" />
+                    <!--  7  -->
                     <ColumnDefinition Width="0.04*" />
+                    <!--  8  -->
+                    <ColumnDefinition Width="0.01*" />
                 </Grid.ColumnDefinitions>
+
+                <!--  Top Icons  -->
+                <StackLayout
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    xct:TouchEffect.NativeAnimation="True"
+                    xct:TouchEffect.AnimationDuration="300">
+                    <Image
+                        Source="{StaticResource icon_left_arrow_line}"
+                        HorizontalOptions="Center"
+                        VerticalOptions="CenterAndExpand" />
+                </StackLayout>
+
+                <StackLayout
+                    Grid.Row="1"
+                    Grid.Column="6"
+                    Grid.ColumnSpan="2"
+                    xct:TouchEffect.NativeAnimation="True"
+                    xct:TouchEffect.AnimationDuration="300">
+                    <Image
+                        Source="{StaticResource icon_share_solid}"
+                        HorizontalOptions="Center"
+                        VerticalOptions="CenterAndExpand" />
+                </StackLayout>
+
+                <!--  Image  -->
+                <ffimageloading:CachedImage
+                    Grid.Row="3"
+                    Grid.Column="2"
+                    Grid.ColumnSpan="5"
+                    CacheDuration="30"
+                    DownsampleToViewSize="True"
+                    FadeAnimationForCachedImages="True"
+                    FadeAnimationEnabled="True"
+                    FadeAnimationDuration="100"
+                    Source="{Binding SelectedFood.Image_Food}" />
+
+                <!--  Title and Description  -->
+                <Label
+                    Grid.Row="5"
+                    Grid.Column="2"
+                    Grid.ColumnSpan="5"
+                    Text="{Binding SelectedFood.Name_Food}"
+                    Style="{StaticResource TxtHeadLine5_1}" />
+
+                <Label
+                    Grid.Row="7"
+                    Grid.Column="2"
+                    Grid.ColumnSpan="5"
+                    MaxLines="100"
+                    Text="{Binding SelectedFood.Long_Description_Food}"
+                    Style="{StaticResource TxtBody1_1}" />
+
+                <!--  Description and Price Value  -->
+                <Label
+                    Grid.Row="10"
+                    Grid.Column="2"
+                    Grid.ColumnSpan="2"
+                    Text="Total Price:"
+                    Style="{StaticResource TxtBody1_1}" />
+
+                <Label
+                    Grid.Row="12"
+                    Grid.Column="2"
+                    Grid.ColumnSpan="2"
+                    Text="{Binding SelectedFood.Price_Food, StringFormat='{0:C2}'}"
+                    Style="{StaticResource TxtBody1_2}" />
+
+                <!--  Add to Cart Button  -->
+                <yummy:PancakeView
+                    Grid.Row="9"
+                    Grid.RowSpan="5"
+                    Grid.Column="5"
+                    Grid.ColumnSpan="2"
+                    Padding="13,0"
+                    xct:TouchEffect.NativeAnimation="True"
+                    xct:TouchEffect.AnimationDuration="300"
+                    BackgroundColor="{DynamicResource colPrim}"
+                    CornerRadius="38,38,0,38">
+                    <StackLayout
+                        Orientation="Horizontal"
+                        VerticalOptions="CenterAndExpand"
+                        Spacing="7">
+                        <Label
+                            Text="Add to Cart"
+                            Style="{StaticResource TxtSubtitle1_3}"
+                            HorizontalOptions="EndAndExpand"
+                            VerticalOptions="Center" />
+
+                        <yummy:PancakeView
+                            BackgroundColor="{DynamicResource colQui}"
+                            HorizontalOptions="End"
+                            HeightRequest="48"
+                            WidthRequest="48"
+                            CornerRadius="24">
+                            <Image
+                                Source="{StaticResource icon_add_line}"
+                                VerticalOptions="CenterAndExpand" />
+                        </yummy:PancakeView>
+                    </StackLayout>
+                </yummy:PancakeView>
 
             </Grid>
 

@@ -125,7 +125,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\XF_MicunaFood\XF_MicunaFood.csproj">
-      <Project>{3FB89CDA-47CE-4E6A-AA05-BFC63C965843}</Project>
+      <Project>{EDA7A672-E6AC-43F7-8E09-AC7A94F9AAF8}</Project>
       <Name>XF_MicunaFood</Name>
     </ProjectReference>
   </ItemGroup>

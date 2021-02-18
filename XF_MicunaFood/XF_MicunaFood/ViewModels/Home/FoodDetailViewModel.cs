@@ -10,7 +10,7 @@ namespace XF_MicunaFood.ViewModels.Home
 {
     public class FoodDetailViewModel : BaseViewModel
     {
-        private HomeViewModel homeViewModel;
+        private readonly HomeViewModel homeViewModel;
         public FoodsViewModel SelectedFood { get; set; }
 
         public FoodDetailViewModel(FoodsViewModel selectedFoodsViewModel)
