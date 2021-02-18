@@ -8,6 +8,8 @@
     xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    ios:Page.UseSafeArea="True"
     NavigationPage.HasNavigationBar="false">
 
 
@@ -86,11 +88,11 @@
                         <!--  0  -->
                         <ColumnDefinition Width="0.04*" />
                         <!--  1  -->
-                        <ColumnDefinition Width="0.087*" />
+                        <ColumnDefinition Width="Auto" />
                         <!--  2  -->
                         <ColumnDefinition Width="0.68*" />
                         <!--  3  -->
-                        <ColumnDefinition Width="0.153*" />
+                        <ColumnDefinition Width="Auto" />
                         <!--  4  -->
                         <ColumnDefinition Width="0.04*" />
                     </Grid.ColumnDefinitions>
@@ -100,6 +102,9 @@
                         Grid.Row="1"
                         Grid.Column="1"
                         xct:TouchEffect.NativeAnimation="True"
+                        xct:TouchEffect.AnimationDuration="300"
+                        VerticalOptions="Start"
+                        HorizontalOptions="Start"
                         Source="{StaticResource icon_filter_line}" />
 
                     <Image
@@ -107,7 +112,9 @@
                         Grid.RowSpan="2"
                         Grid.Column="3"
                         xct:TouchEffect.NativeAnimation="True"
+                        xct:TouchEffect.AnimationDuration="300"
                         VerticalOptions="Start"
+                        HorizontalOptions="End"
                         Source="{StaticResource icon_shopping_cart_line}" />
 
                     <Label
@@ -181,7 +188,9 @@
                         <CollectionView.ItemsLayout>
                             <GridItemsLayout
                                 Orientation="Horizontal"
-                                HorizontalItemSpacing="35" />
+                                HorizontalItemSpacing="35"
+                                SnapPointsType="MandatorySingle"
+                                SnapPointsAlignment="Center" />
                         </CollectionView.ItemsLayout>
 
                         <CollectionView.ItemTemplate>
@@ -293,12 +302,9 @@
                                                 Grid.RowSpan="3"
                                                 Grid.Column="4"
                                                 Grid.ColumnSpan="2"
-                                                CornerRadius="80"
+                                                CornerRadius="20"
                                                 BackgroundColor="{DynamicResource colPrim}">
                                                 <Image
-                                                    Grid.Row="0"
-                                                    Grid.RowSpan="2"
-                                                    Grid.Column="1"
                                                     HorizontalOptions="Center"
                                                     VerticalOptions="Center"
                                                     TranslationY="1"

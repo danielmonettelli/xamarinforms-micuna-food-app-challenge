@@ -18,7 +18,7 @@ namespace XF_MicunaFood.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HomePage : ContentPage
     {
-        private HomeViewModel homeViewModel;
+        private readonly HomeViewModel homeViewModel;
 
         public HomePage()
         {
@@ -65,6 +65,7 @@ namespace XF_MicunaFood.Views
 
             if (selectedItem != null)
             {
+                await Task.Delay(350);
                 await Navigation.PushAsync(new FoodDetailPage(selectedItem as FoodsViewModel));
             }
 
