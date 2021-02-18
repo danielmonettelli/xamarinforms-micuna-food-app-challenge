@@ -21,5 +21,11 @@ namespace XF_MicunaFood.Views
 
             BindingContext = new FoodDetailViewModel(item);
         }
+
+        private async void ReturnPreviousPage_Tapped(object sender, EventArgs e)
+        {
+            await Task.Delay(350);
+            await Navigation.PopAsync(true);
+        }
     }
 }

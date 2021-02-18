@@ -8,7 +8,7 @@
     xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     ios:Page.UseSafeArea="True"
-    NavigationPage.HasNavigationBar="True">
+    NavigationPage.HasNavigationBar="False">
 
 
     <ContentPage.Resources>
@@ -83,6 +83,10 @@
                     Grid.ColumnSpan="2"
                     xct:TouchEffect.NativeAnimation="True"
                     xct:TouchEffect.AnimationDuration="300">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ReturnPreviousPage_Tapped" />
+                    </StackLayout.GestureRecognizers>
+
                     <Image
                         Source="{StaticResource icon_left_arrow_line}"
                         HorizontalOptions="Center"
