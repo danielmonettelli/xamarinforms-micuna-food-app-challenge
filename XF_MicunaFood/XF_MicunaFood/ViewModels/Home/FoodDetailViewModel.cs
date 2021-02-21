@@ -16,7 +16,7 @@ namespace XF_MicunaFood.ViewModels.Home
         public FoodDetailViewModel(FoodsViewModel selectedFoodsViewModel)
         {
             homeViewModel = new HomeViewModel();
-           
+
             var selectedItem = homeViewModel.Foods.Where(f => f.Name_Food.Equals(selectedFoodsViewModel.Name_Food)).FirstOrDefault();
 
             SelectedFood = new FoodsViewModel(selectedItem);

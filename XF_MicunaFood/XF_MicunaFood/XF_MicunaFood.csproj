@@ -52,8 +52,6 @@
 
     <EmbeddedResource Include="Resources\FontIcons\materialdesignicons-webfont.ttf" />
 
-    <EmbeddedResource Include="MicunaFood.json" />
-
     <EmbeddedResource Include="Resources\FontIcons\monettelliuikitfonticons.ttf" />
   </ItemGroup>
 

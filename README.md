@@ -12,7 +12,7 @@ The project could not be possible thanks to the incredible design of [Ghulam Ras
 [![The Result](https://raw.githubusercontent.com/danielmonettelli/danielmonettelli.github.io/master/assets/img/images/Publication_5/publication_5_result.gif)](https://danielmonettelli.github.io/posts/xamarin-forms-ui-ux-challenges-micuna-food_part1)
 
 # Blog Post
-- [English](https://danielmonettelli.github.io/posts/xamarin-forms-ui-ux-challenges-micuna-food_part1).
+- [Xamarin.Forms UI/UX Challenges - Micuna Food - Part1](https://danielmonettelli.github.io/posts/xamarin-forms-ui-ux-challenges-micuna-food_part1).
 
  # Sponsors
  ## Snppts - Beautiful Xamarin.Forms Designs
