@@ -6,7 +6,11 @@
     xmlns:tabs="http://sharpnado.com"
     xmlns:sh="clr-namespace:Sharpnado.Shades;assembly=Sharpnado.Shadows"
     xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
-    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms">
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    ios:Page.UseSafeArea="True"
+    NavigationPage.HasNavigationBar="false">
 
 
     <ContentPage.Resources>
@@ -51,70 +55,86 @@
 
                     <Grid.RowDefinitions>
                         <!--  0  -->
-                        <RowDefinition Height="24" />
+                        <RowDefinition Height="9" />
                         <!--  1  -->
-                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="15" />
                         <!--  2  -->
-                        <RowDefinition Height="56" />
+                        <RowDefinition Height="33" />
                         <!--  3  -->
-                        <RowDefinition Height="16" />
+                        <RowDefinition Height="41" />
                         <!--  4  -->
-                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="16" />
                         <!--  5  -->
-                        <RowDefinition Height="8" />
+                        <RowDefinition Height="Auto" />
                         <!--  6  -->
-                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="8" />
                         <!--  7  -->
-                        <RowDefinition Height="24" />
+                        <RowDefinition Height="Auto" />
                         <!--  8  -->
-                        <RowDefinition Height="70" />
+                        <RowDefinition Height="24" />
                         <!--  9  -->
-                        <RowDefinition Height="32" />
+                        <RowDefinition Height="70" />
                         <!--  10  -->
-                        <RowDefinition Height="Auto" />
-                        <!--  11  -->
                         <RowDefinition Height="32" />
-                        <!--  12  -->
+                        <!--  11  -->
                         <RowDefinition Height="Auto" />
+                        <!--  12  -->
+                        <RowDefinition Height="32" />
                         <!--  13  -->
+                        <RowDefinition Height="Auto" />
+                        <!--  14  -->
                         <RowDefinition Height="122" />
                     </Grid.RowDefinitions>
 
                     <Grid.ColumnDefinitions>
                         <!--  0  -->
-                        <ColumnDefinition Width="0.04*" />
+                        <ColumnDefinition Width="0.033*" />
                         <!--  1  -->
-                        <ColumnDefinition Width="0.087*" />
+                        <ColumnDefinition Width="0.017*" />
                         <!--  2  -->
-                        <ColumnDefinition Width="0.68*" />
+                        <ColumnDefinition Width="41" />
                         <!--  3  -->
-                        <ColumnDefinition Width="0.153*" />
+                        <ColumnDefinition Width="0.653*" />
                         <!--  4  -->
-                        <ColumnDefinition Width="0.04*" />
+                        <ColumnDefinition Width="Auto" />
+                        <!--  5  -->
+                        <ColumnDefinition Width="0.05*" />
                     </Grid.ColumnDefinitions>
 
                     <!--  Top Icons and Labels  -->
-                    <Image
-                        Grid.Row="1"
-                        Grid.Column="1"
-                        Source="{StaticResource icon_filter_line}" />
-
-                    <Image
+                    <StackLayout
                         Grid.Row="1"
                         Grid.RowSpan="2"
-                        Grid.Column="3"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2"
+                        xct:TouchEffect.NativeAnimation="True"
+                        xct:TouchEffect.AnimationDuration="300">
+                        <Image
+                            Source="{StaticResource icon_filter_line}"
+                            HorizontalOptions="Center"
+                            VerticalOptions="CenterAndExpand" />
+                    </StackLayout>
+
+                    <Image
+                        Grid.Row="2"
+                        Grid.RowSpan="2"
+                        Grid.Column="4"
+                        xct:TouchEffect.NativeAnimation="True"
+                        xct:TouchEffect.AnimationDuration="300"
+                        VerticalOptions="Start"
+                        HorizontalOptions="End"
                         Source="{StaticResource icon_shopping_cart_line}" />
 
                     <Label
-                        Grid.Row="4"
-                        Grid.Column="1"
+                        Grid.Row="5"
+                        Grid.Column="2"
                         Grid.ColumnSpan="2"
                         Text="Delicious Food"
                         Style="{StaticResource TxtHeadLine5_1}" />
 
                     <Label
-                        Grid.Row="6"
-                        Grid.Column="1"
+                        Grid.Row="7"
+                        Grid.Column="2"
                         Grid.ColumnSpan="2"
                         MaxLines="2"
                         Text="We made fresh and Healthy food"
@@ -124,8 +144,8 @@
                     <!--  Category List  -->
                     <FlexLayout
                         x:Name="CategoryList"
-                        Grid.Row="8"
-                        Grid.Column="1"
+                        Grid.Row="9"
+                        Grid.Column="2"
                         Grid.ColumnSpan="3"
                         Direction="Row"
                         JustifyContent="SpaceBetween"
@@ -135,7 +155,7 @@
                                 <yummy:PancakeView
                                     CornerRadius="20"
                                     WidthRequest="70"
-                                    HasShadow="True"
+                                    Shadow="{yummy:ShadowMarkup}"
                                     Style="{StaticResource vsm_surfaceCategory}">
                                     <yummy:PancakeView.GestureRecognizers>
                                         <TapGestureRecognizer Tapped="SelectedCategory_Tapped" />
@@ -161,21 +181,24 @@
                         </BindableLayout.ItemTemplate>
                     </FlexLayout>
 
-                    
+
                     <!--  Dynamic Food List  -->
                     <CollectionView
                         x:Name="collectionView_MicunaFood"
-                        Grid.Row="10"
-                        Grid.Column="1"
+                        Grid.Row="11"
+                        Grid.Column="2"
                         Grid.ColumnSpan="4"
                         ItemsSource="{Binding DynamicFoods}"
+                        HeightRequest="288"
                         SelectionMode="Single"
-                        HeightRequest="288">
+                        SelectionChanged="CollectionView_SelectedItem">
 
                         <CollectionView.ItemsLayout>
                             <GridItemsLayout
                                 Orientation="Horizontal"
-                                HorizontalItemSpacing="35" />
+                                HorizontalItemSpacing="35"
+                                SnapPointsType="MandatorySingle"
+                                SnapPointsAlignment="Center" />
                         </CollectionView.ItemsLayout>
 
                         <CollectionView.ItemTemplate>
@@ -202,18 +225,24 @@
                                     </Grid.ColumnDefinitions>
 
 
-                                    <Frame
+                                    <yummy:PancakeView
                                         Grid.Row="1"
                                         Grid.RowSpan="2"
                                         Grid.Column="0"
                                         Grid.ColumnSpan="3"
-                                        CornerRadius="20">
-                                        <Frame.Background>
-                                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                                                <GradientStop Offset="0.1" Color="{StaticResource colStartSurf1}" />
-                                                <GradientStop Offset="1.0" Color="{StaticResource colEndSurf1}" />
-                                            </LinearGradientBrush>
-                                        </Frame.Background>
+                                        Margin="3,0,3,3"
+                                        CornerRadius="20"
+                                        Shadow="{yummy:ShadowMarkup BlurRadius=3}">
+                                        <yummy:PancakeView.BackgroundGradientStops>
+                                            <yummy:GradientStopCollection>
+                                                <yummy:GradientStop
+                                                    Offset="0"
+                                                    Color="{StaticResource colStartSurf1}" />
+                                                <yummy:GradientStop
+                                                    Offset="1"
+                                                    Color="{StaticResource colEndSurf1}" />
+                                            </yummy:GradientStopCollection>
+                                        </yummy:PancakeView.BackgroundGradientStops>
                                         <Grid>
                                             <Grid.RowDefinitions>
                                                 <!--  0  -->
@@ -281,22 +310,19 @@
                                                 Grid.RowSpan="3"
                                                 Grid.Column="4"
                                                 Grid.ColumnSpan="2"
-                                                CornerRadius="80"
+                                                CornerRadius="20"
                                                 BackgroundColor="{DynamicResource colPrim}">
                                                 <Image
-                                                    Grid.Row="0"
-                                                    Grid.RowSpan="2"
-                                                    Grid.Column="1"
                                                     HorizontalOptions="Center"
                                                     VerticalOptions="Center"
                                                     TranslationY="1"
-                                                    TranslationX="1"
+                                                    TranslationX="0.2"
                                                     Source="{StaticResource icon_heart_line}" />
                                             </yummy:PancakeView>
 
                                         </Grid>
 
-                                    </Frame>
+                                    </yummy:PancakeView>
 
                                     <ffimageloading:CachedImage
                                         Grid.Row="0"
@@ -320,8 +346,8 @@
                     <!--  List of All Foods  -->
                     <CarouselView
                         x:Name="carouselView_MicunaFood"
-                        Grid.Row="12"
-                        Grid.Column="1"
+                        Grid.Row="13"
+                        Grid.Column="2"
                         Grid.ColumnSpan="3"
                         HeightRequest="157"
                         ItemsSource="{Binding Foods}">
@@ -352,18 +378,24 @@
                                         <ColumnDefinition Width="0.227*" />
                                     </Grid.ColumnDefinitions>
 
-                                    <Frame
+                                    <yummy:PancakeView
                                         Grid.Row="1"
                                         Grid.Column="0"
                                         Grid.ColumnSpan="2"
+                                        Margin="3,3,0,3"
                                         CornerRadius="20"
-                                        HeightRequest="145">
-                                        <Frame.Background>
-                                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                                                <GradientStop Offset="0.1" Color="{StaticResource colStartSurf1}" />
-                                                <GradientStop Offset="1.0" Color="{StaticResource colEndSurf1}" />
-                                            </LinearGradientBrush>
-                                        </Frame.Background>
+                                        HeightRequest="145"
+                                        Shadow="{yummy:ShadowMarkup BlurRadius=3}">
+                                        <yummy:PancakeView.BackgroundGradientStops>
+                                            <yummy:GradientStopCollection>
+                                                <yummy:GradientStop
+                                                    Offset="0"
+                                                    Color="{StaticResource colStartSurf1}" />
+                                                <yummy:GradientStop
+                                                    Offset="1"
+                                                    Color="{StaticResource colEndSurf1}" />
+                                            </yummy:GradientStopCollection>
+                                        </yummy:PancakeView.BackgroundGradientStops>
 
                                         <Grid>
 
@@ -416,7 +448,7 @@
 
                                         </Grid>
 
-                                    </Frame>
+                                    </yummy:PancakeView>
 
                                     <ffimageloading:CachedImage
                                         Grid.Row="0"
@@ -439,7 +471,7 @@
                 </Grid>
             </ScrollView>
 
-            
+
             <!--  Elegant TabView  -->
             <tabs:TabHostView
                 Grid.Row="1"
@@ -447,7 +479,10 @@
                 HeightRequest="86"
                 CornerRadius="35"
                 IsSegmented="True"
-                Shades="{sh:ShadeStack}"
+                Shades="{sh:SingleShade Offset='0,8',
+                                        BlurRadius=20,
+                                        Color=#323232,
+                                        Opacity=0.8}"
                 BackgroundColor="{DynamicResource colPrim}"
                 TabType="Fixed">
 
@@ -456,22 +491,26 @@
                     <tabs:BottomTabItem
                         IconImageSource="{StaticResource icon_tab_home_line}"
                         IsTextVisible="False"
-                        SelectedTabColor="{DynamicResource colTer}" />
+                        SelectedTabColor="{DynamicResource colTer}"
+                        UnselectedIconColor="{DynamicResource colQui}" />
 
                     <tabs:BottomTabItem
                         IconImageSource="{StaticResource icon_tab_wallet_line}"
                         IsTextVisible="False"
-                        SelectedTabColor="{DynamicResource colTer}" />
+                        SelectedTabColor="{DynamicResource colTer}"
+                        UnselectedIconColor="{DynamicResource colQui}" />
 
                     <tabs:BottomTabItem
                         IconImageSource="{StaticResource icon_tab_conversation_line}"
                         IsTextVisible="False"
-                        SelectedTabColor="{DynamicResource colTer}" />
+                        SelectedTabColor="{DynamicResource colTer}"
+                        UnselectedIconColor="{DynamicResource colQui}" />
 
                     <tabs:BottomTabItem
                         IconImageSource="{StaticResource icon_tab_user_line}"
                         IsTextVisible="False"
-                        SelectedTabColor="{DynamicResource colTer}" />
+                        SelectedTabColor="{DynamicResource colTer}"
+                        UnselectedIconColor="{DynamicResource colQui}" />
 
                 </tabs:TabHostView.Tabs>
             </tabs:TabHostView>

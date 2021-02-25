@@ -19,7 +19,7 @@ namespace XF_MicunaFood.ViewModels.Home
 
         public HomeViewModel()
         {
-            
+
             DynamicFoods = new ObservableRangeCollection<FoodsViewModel>();
 
             Categories = new ObservableRangeCollection<Category>
@@ -44,7 +44,7 @@ namespace XF_MicunaFood.ViewModels.Home
                     Name_Category="Gourmet Food",
                     Image_Category=MonettelliFontIcons.icon_gourmet_food_line
                 },
-                
+
             };
 
             Foods = new ObservableRangeCollection<Food>
@@ -296,11 +296,11 @@ namespace XF_MicunaFood.ViewModels.Home
 
             var items = Foods.Where(f => f.VarietyFoods.Name_VarietyFood.Contains(obj)).ToList();
 
-            if(isSelected == true)
-            foreach (var item in items)
-            {
-                DynamicFoods.Add(new FoodsViewModel(item));
-            }
+            if (isSelected == true)
+                foreach (var item in items)
+                {
+                    DynamicFoods.Add(new FoodsViewModel(item));
+                }
         }
     }
 }

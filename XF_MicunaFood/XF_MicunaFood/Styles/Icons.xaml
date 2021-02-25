@@ -45,7 +45,7 @@
         x:Key="icon_filter_line"
         FontFamily="MonettelliFontIcons"
         Glyph="{x:Static FontAwesome:MonettelliFontIcons.icon_filter_line}"
-        Size="34"
+        Size="18"
         Color="{DynamicResource colPrim}" />
 
     <FontImageSource
