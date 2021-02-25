@@ -30,7 +30,12 @@
                     <!--  2  -->
                     <RowDefinition Height="13" />
                     <!--  3  -->
-                    <RowDefinition Height="374" />
+                    <RowDefinition
+                        x:Name="ProportionalImage"
+                        Height="{OnIdiom Phone={OnPlatform iOS=374,
+                                                           Android=374},
+                                         Tablet={OnPlatform iOS=0.469*,
+                                                            Android=0.469*}}" />
                     <!--  4  -->
                     <RowDefinition Height="32" />
                     <!--  5  -->
@@ -40,7 +45,12 @@
                     <!--  7  -->
                     <RowDefinition Height="Auto" />
                     <!--  8  -->
-                    <RowDefinition Height="0.04*" />
+                    <RowDefinition
+                        x:Name="ProportionalSeparator"
+                        Height="{OnIdiom Phone={OnPlatform iOS=32,
+                                                           Android=32},
+                                         Tablet={OnPlatform iOS=0.04*,
+                                                            Android=0.04*}}" />
                     <!--  9  -->
                     <RowDefinition Height="16" />
                     <!--  10  -->
