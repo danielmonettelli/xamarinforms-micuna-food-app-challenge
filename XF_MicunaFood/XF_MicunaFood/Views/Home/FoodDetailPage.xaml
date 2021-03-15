@@ -7,6 +7,8 @@
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:home="clr-namespace:XF_MicunaFood.ViewModels.Home"
+    x:DataType="home:FoodDetailViewModel"
     ios:Page.UseSafeArea="True"
     NavigationPage.HasNavigationBar="False">
 
@@ -30,12 +32,27 @@
                     <!--  2  -->
                     <RowDefinition Height="13" />
                     <!--  3  -->
-                    <RowDefinition
-                        x:Name="ProportionalImage"
-                        Height="{OnIdiom Phone={OnPlatform iOS=374,
-                                                           Android=374},
-                                         Tablet={OnPlatform iOS=0.469*,
-                                                            Android=0.469*}}" />
+                    <RowDefinition>
+                        <RowDefinition.Height>
+                            <OnIdiom x:TypeArguments="GridLength">
+                                <OnIdiom.Phone>
+                                    <OnPlatform x:TypeArguments="GridLength">
+                                        <On
+                                            Platform="iOS,Android"
+                                            Value="374" />
+                                    </OnPlatform>
+                                </OnIdiom.Phone>
+
+                                <OnIdiom.Tablet>
+                                    <OnPlatform x:TypeArguments="GridLength">
+                                        <On
+                                            Platform="iOS,Android"
+                                            Value="0.469*" />
+                                    </OnPlatform>
+                                </OnIdiom.Tablet>
+                            </OnIdiom>
+                        </RowDefinition.Height>
+                    </RowDefinition>
                     <!--  4  -->
                     <RowDefinition Height="32" />
                     <!--  5  -->
@@ -45,12 +62,27 @@
                     <!--  7  -->
                     <RowDefinition Height="Auto" />
                     <!--  8  -->
-                    <RowDefinition
-                        x:Name="ProportionalSeparator"
-                        Height="{OnIdiom Phone={OnPlatform iOS=32,
-                                                           Android=32},
-                                         Tablet={OnPlatform iOS=0.04*,
-                                                            Android=0.04*}}" />
+                    <RowDefinition>
+                        <RowDefinition.Height>
+                            <OnIdiom x:TypeArguments="GridLength">
+                                <OnIdiom.Phone>
+                                    <OnPlatform x:TypeArguments="GridLength">
+                                        <On
+                                            Platform="iOS,Android"
+                                            Value="32" />
+                                    </OnPlatform>
+                                </OnIdiom.Phone>
+
+                                <OnIdiom.Tablet>
+                                    <OnPlatform x:TypeArguments="GridLength">
+                                        <On
+                                            Platform="iOS,Android"
+                                            Value="0.04*" />
+                                    </OnPlatform>
+                                </OnIdiom.Tablet>
+                            </OnIdiom>
+                        </RowDefinition.Height>
+                    </RowDefinition>
                     <!--  9  -->
                     <RowDefinition Height="16" />
                     <!--  10  -->
