@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
-using XF_MicunaFood.ViewModels.Base;
-using XF_MicunaFood.ViewModels.Home;
+using XF_MicunaFood.ViewModels;
 
 namespace XF_MicunaFood.Views
 {

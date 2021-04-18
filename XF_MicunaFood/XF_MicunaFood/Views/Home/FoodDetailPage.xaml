@@ -7,8 +7,8 @@
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-    xmlns:home="clr-namespace:XF_MicunaFood.ViewModels.Home"
-    x:DataType="home:FoodDetailViewModel"
+    xmlns:ViewModel="clr-namespace:XF_MicunaFood.ViewModels"
+    x:DataType="ViewModel:FoodDetailViewModel"
     ios:Page.UseSafeArea="True"
     NavigationPage.HasNavigationBar="False">
 
