@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using XF_MicunaFood.Models;
 
-namespace XF_MicunaFood.ViewModels.Base
+namespace XF_MicunaFood.ViewModels
 {
     public class FoodsViewModel : BaseViewModel
     {
@@ -53,12 +53,12 @@ namespace XF_MicunaFood.ViewModels.Base
 
         public FoodsViewModel(Food food)
         {
-            VarietyFoods = food.VarietyFoods;
-            Name_Food = food.Name_Food;
-            Image_Food = food.Image_Food;
-            Price_Food = food.Price_Food;
-            Short_Description_Food = food.Short_Description_Food;
-            Long_Description_Food = food.Long_Description_Food;
+            this.VarietyFoods = food.VarietyFoods;
+            this.Name_Food = food.Name_Food;
+            this.Image_Food = food.Image_Food;
+            this.Price_Food = food.Price_Food;
+            this.Short_Description_Food = food.Short_Description_Food;
+            this.Long_Description_Food = food.Long_Description_Food;
         }
     }
 }
