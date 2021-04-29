@@ -22,7 +22,7 @@
 
         <ScrollView>
 
-            <Grid>
+            <Grid x:Name="layoutMainParent">
 
                 <Grid.RowDefinitions>
                     <!--  0  -->
@@ -141,14 +141,28 @@
                     Grid.ColumnSpan="2"
                     xct:TouchEffect.NativeAnimation="True"
                     xct:TouchEffect.AnimationDuration="300">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ScreenshotAndShareFile_Tapped" />
+                    </StackLayout.GestureRecognizers>
+
                     <Image
-                        Source="{StaticResource icon_share_solid}"
+                        x:Name="stateFontIcon"
+                        Style="{StaticResource vsm_fontIconChanged}"
                         HorizontalOptions="Center"
                         VerticalOptions="CenterAndExpand" />
                 </StackLayout>
 
-                <!--  Image  -->
+                <!--  Image for Screenshot  -->
                 <ffimageloading:CachedImage
+                    x:Name="imageForScreenshot"
+                    Grid.Row="3"
+                    Grid.Column="2"
+                    Grid.ColumnSpan="5"
+                    IsVisible="false" />
+
+                <!--  Image Main  -->
+                <ffimageloading:CachedImage
+                    x:Name="imageMain"
                     Grid.Row="3"
                     Grid.Column="2"
                     Grid.ColumnSpan="5"
@@ -157,6 +171,7 @@
                     FadeAnimationForCachedImages="True"
                     FadeAnimationEnabled="True"
                     FadeAnimationDuration="100"
+                    CacheType="All"
                     Source="{Binding SelectedFood.Image_Food}" />
 
                 <!--  Title and Description  -->

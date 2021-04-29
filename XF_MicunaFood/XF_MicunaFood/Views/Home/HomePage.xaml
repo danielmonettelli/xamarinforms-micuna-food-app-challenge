@@ -333,6 +333,7 @@
                                         FadeAnimationForCachedImages="True"
                                         FadeAnimationEnabled="True"
                                         FadeAnimationDuration="100"
+                                        CacheType="All"
                                         Source="{Binding Image_Food}" />
 
                                 </Grid>
@@ -460,6 +461,7 @@
                                         FadeAnimationForCachedImages="True"
                                         FadeAnimationEnabled="True"
                                         FadeAnimationDuration="100"
+                                        CacheType="All"
                                         Source="{Binding Image_Food}" />
 
                                 </Grid>

@@ -125,6 +125,30 @@
 
     <!--#region Visual States Manager-->
     <Style
+        x:Key="vsm_fontIconChanged"
+        TargetType="Image">
+
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="Source" Value="{StaticResource icon_screenshot_solid}" />
+                        </VisualState.Setters>
+                    </VisualState>
+
+                    <VisualState x:Name="Selected">
+                        <VisualState.Setters>
+                            <Setter Property="Source" Value="{StaticResource icon_share_solid}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+
+    <Style
         x:Key="vsm_labelCategory"
         TargetType="Label">
 
