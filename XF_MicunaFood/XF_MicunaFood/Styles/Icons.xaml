@@ -70,6 +70,13 @@
         Color="{DynamicResource colPrim}" />
 
     <FontImageSource
+        x:Key="icon_screenshot_solid"
+        FontFamily="MonettelliFontIcons"
+        Glyph="{x:Static FontAwesome:MonettelliFontIcons.icon_screenshot_solid}"
+        Size="26"
+        Color="{DynamicResource colPrim}" />
+
+    <FontImageSource
         x:Key="icon_share_solid"
         FontFamily="MonettelliFontIcons"
         Glyph="{x:Static FontAwesome:MonettelliFontIcons.icon_share_solid}"
