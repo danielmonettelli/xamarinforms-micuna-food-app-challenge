@@ -9,11 +9,12 @@ The project could not be possible thanks to the incredible design of [Ghulam Ras
 [![Design](https://raw.githubusercontent.com/danielmonettelli/danielmonettelli.github.io/master/assets/img/images/Publication_5/5_original_design.png)](https://www.behance.net/gallery/112665551/Food-Web-and-App-Design)
 
 # The Result
-[![The Result](https://raw.githubusercontent.com/danielmonettelli/danielmonettelli.github.io/master/assets/img/images/Publication_5/5_2/publication_5_2_result.gif)](https://danielmonettelli.github.io/posts/xamarin-forms-ui-ux-challenges-micuna-food_part1)
+[![The Result](https://raw.githubusercontent.com/danielmonettelli/danielmonettelli.github.io/master/assets/img/images/Publication_5/5_3/publication_5_3_result.gif)](https://danielmonettelli.github.io/posts/xamarin-forms-ui-ux-challenges-micuna-food_part1)
 
 # Blog Post
 - [Xamarin.Forms UI/UX Challenges - Micuna Food - Part1](https://danielmonettelli.github.io/posts/xamarin-forms-ui-ux-challenges-micuna-food_part1/).
 - [Xamarin.Forms UI/UX Challenges - Micuna Food - Part2](https://danielmonettelli.github.io/posts/xamarin-forms-ui-ux-challenges-micuna-food_part2/).
+- [Xamarin.Forms UI/UX Challenges - Micuna Food - Part3](https://danielmonettelli.github.io/posts/xamarin-forms-ui-ux-challenges-micuna-food_part3/).
 
  # Sponsors
  ## Snppts - Beautiful Xamarin.Forms Designs
