@@ -12,6 +12,8 @@ The project could not be possible thanks to the incredible design of [Ghulam Ras
 
 ## The Result
 
+https://user-images.githubusercontent.com/14121125/181876358-2c836482-a060-48ce-8627-e217f5d0157e.mp4
+
 ## Blog Post
 
 - [Xamarin.Forms UI/UX Challenges - Micuna Food - Part1](https://danimonettelli.github.io/posts/xamarin-forms-ui-ux-challenges-micuna-food_part1/).
