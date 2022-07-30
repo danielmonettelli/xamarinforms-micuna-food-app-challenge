@@ -1,7 +1,4 @@
 ﻿using MvvmHelpers;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using XF_MicunaFood.Models;
 
 namespace XF_MicunaFood.ViewModels
@@ -17,48 +14,48 @@ namespace XF_MicunaFood.ViewModels
 
         public VarietyFood VarietyFoods
         {
-            get { return varietyFoods; }
-            set { SetProperty(ref varietyFoods, value); }
+            get => varietyFoods;
+            set => SetProperty(ref varietyFoods, value);
         }
 
         public string Name_Food
         {
-            get { return name_food; }
-            set { SetProperty(ref name_food, value); }
+            get => name_food;
+            set => SetProperty(ref name_food, value);
         }
 
         public string Image_Food
         {
-            get { return image_food; }
-            set { SetProperty(ref image_food, value); }
+            get => image_food;
+            set => SetProperty(ref image_food, value);
         }
 
         public double Price_Food
         {
-            get { return price_food; }
-            set { SetProperty(ref price_food, value); }
+            get => price_food;
+            set => SetProperty(ref price_food, value);
         }
 
         public string Short_Description_Food
         {
-            get { return short_description_food; }
-            set { SetProperty(ref short_description_food, value); }
+            get => short_description_food;
+            set => SetProperty(ref short_description_food, value);
         }
 
         public string Long_Description_Food
         {
-            get { return long_description_food; }
-            set { SetProperty(ref long_description_food, value); }
+            get => long_description_food;
+            set => SetProperty(ref long_description_food, value);
         }
 
         public FoodsViewModel(Food food)
         {
-            this.VarietyFoods = food.VarietyFoods;
-            this.Name_Food = food.Name_Food;
-            this.Image_Food = food.Image_Food;
-            this.Price_Food = food.Price_Food;
-            this.Short_Description_Food = food.Short_Description_Food;
-            this.Long_Description_Food = food.Long_Description_Food;
+            VarietyFoods = food.VarietyFoods;
+            Name_Food = food.Name_Food;
+            Image_Food = food.Image_Food;
+            Price_Food = food.Price_Food;
+            Short_Description_Food = food.Short_Description_Food;
+            Long_Description_Food = food.Long_Description_Food;
         }
     }
 }

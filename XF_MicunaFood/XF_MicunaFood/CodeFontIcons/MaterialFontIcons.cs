@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace XF_MicunaFood.CodeFontIcons
+﻿namespace XF_MicunaFood.CodeFontIcons
 {
-    static class MaterialFontIcons
+    internal static class MaterialFontIcons
     {
         public const string Numeric0 = "\u0030";
         public const string Numeric1 = "\u0031";

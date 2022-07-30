@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace XF_MicunaFood.Models
+﻿namespace XF_MicunaFood.Models
 {
     public class Category
     {

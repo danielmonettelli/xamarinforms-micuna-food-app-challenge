@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace XF_MicunaFood.CodeFontIcons
+﻿namespace XF_MicunaFood.CodeFontIcons
 {
-    static class MonettelliFontIcons
+    internal static class MonettelliFontIcons
     {
         public const string icon_heart_line = "\ue800";
         public const string icon_left_arrow_line = "\ue801";

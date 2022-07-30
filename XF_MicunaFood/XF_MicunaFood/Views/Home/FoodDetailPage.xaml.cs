@@ -1,9 +1,6 @@
 ﻿using ImageFromXamarinUI;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Xamarin.CommunityToolkit.Extensions;
 using Xamarin.Essentials;
@@ -36,7 +33,7 @@ namespace XF_MicunaFood.Views
             if (imageForScreenshot.Source == null)
             {
                 // Mode ImageFromXamarinUI
-                var stream = await layoutMainParent.CaptureImageAsync(Color.White);
+                Stream stream = await layoutMainParent.CaptureImageAsync(Color.White);
                 imageForScreenshot.Source = ImageSource.FromStream(() => stream);
 
                 // Mode Xamarin.Essentials.Screenshot
@@ -52,7 +49,7 @@ namespace XF_MicunaFood.Views
                 string fileName = "MicunaFood - " + foodDetailViewModel.SelectedFood.Name_Food + ".png";
                 string fullPath = Path.Combine(FileSystem.CacheDirectory, fileName);
 
-                var byteArray = await imageForScreenshot.GetImageAsPngAsync();
+                byte[] byteArray = await imageForScreenshot.GetImageAsPngAsync();
                 File.WriteAllBytes(fullPath, byteArray);
 
                 await Share.RequestAsync(new ShareFileRequest

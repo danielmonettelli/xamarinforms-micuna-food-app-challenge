@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Reflection;
-using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
-using Xamarin.Forms.PancakeView;
 using Xamarin.Forms.Xaml;
-using XF_MicunaFood.Models;
 using XF_MicunaFood.ViewModels;
 
 namespace XF_MicunaFood.Views
@@ -28,15 +22,15 @@ namespace XF_MicunaFood.Views
             FilterCategory();
         }
 
-        void FilterCategory()
+        private void FilterCategory()
         {
             SelectedCategory_Tapped(CategoryList.Children[3], null);
         }
 
         private void SelectedCategory_Tapped(object sender, EventArgs e)
         {
-            var surfaceCategory = sender as VisualElement;
-            var parent = surfaceCategory.Parent as FlexLayout;
+            VisualElement surfaceCategory = sender as VisualElement;
+            FlexLayout parent = surfaceCategory.Parent as FlexLayout;
 
             foreach (View child in parent.Children)
             {
@@ -47,10 +41,10 @@ namespace XF_MicunaFood.Views
             ChangeFontIconColor(surfaceCategory, true);
         }
 
-        void ChangeFontIconColor(VisualElement child, bool isSelected)
+        private void ChangeFontIconColor(VisualElement child, bool isSelected)
         {
-            var imageCategory = child.FindByName<Label>("ImageCategory");
-            var labelCategory = child.FindByName<Label>("LabelCategory");
+            Label imageCategory = child.FindByName<Label>("ImageCategory");
+            Label labelCategory = child.FindByName<Label>("LabelCategory");
 
             string visualState = isSelected ? "Selected" : "Normal";
             VisualStateManager.GoToState(imageCategory, visualState);
@@ -60,7 +54,7 @@ namespace XF_MicunaFood.Views
 
         private async void CollectionView_SelectedItem(object sender, SelectionChangedEventArgs e)
         {
-            var selectedItem = e.CurrentSelection.FirstOrDefault();
+            object selectedItem = e.CurrentSelection.FirstOrDefault();
 
             if (selectedItem != null)
             {

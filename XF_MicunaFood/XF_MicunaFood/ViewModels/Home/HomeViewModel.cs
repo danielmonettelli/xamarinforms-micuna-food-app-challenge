@@ -1,11 +1,7 @@
-﻿using System;
+﻿using MvvmHelpers;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Globalization;
-using System.IO;
 using System.Linq;
 using XF_MicunaFood.Models;
-using MvvmHelpers;
 using XF_MicunaFood.Services;
 
 namespace XF_MicunaFood.ViewModels
@@ -31,13 +27,15 @@ namespace XF_MicunaFood.ViewModels
         {
             DynamicFoods.Clear();
 
-            var items = Foods.Where(f => f.VarietyFoods.Name_VarietyFood.Contains(obj.ToString())).ToList();
+            List<Food> items = Foods.Where(f => f.VarietyFoods.Name_VarietyFood.Contains(obj.ToString())).ToList();
 
             if (isSelected == true)
-                foreach (var item in items)
+            {
+                foreach (Food item in items)
                 {
                     DynamicFoods.Add(new FoodsViewModel(item));
                 }
+            }
         }
     }
 }
